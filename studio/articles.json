@@ -1,462 +1,807 @@
 [
   {
     "file": "attacking-other-religions.html",
-    "title": "\"Attacking Other Religions\""
+    "title": "\"Attacking Other Religions\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "bagong-lipunan-an-ofws-view.html",
-    "title": "\"Bagong Lipunan\": An OFW's View"
+    "title": "\"Bagong Lipunan\": An OFW's View",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "brief-less-in-the-sea-games-igorot-attire-and-authenticity.html",
-    "title": "\"Brief-less\" in the SEA Games:  Igorot  Attire and Authenticity"
+    "title": "\"Brief-less\" in the SEA Games:  Igorot  Attire and Authenticity",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "in-the-land-of-the-head-hunters-as-an-orientalist-text.html",
-    "title": "\"In the Land of the Head-hunters\" as an Orientalist Text"
+    "title": "\"In the Land of the Head-hunters\" as an Orientalist Text",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "my-heavenly-home-an-ex-preachers-reflection.html",
-    "title": "\"My Heavenly Home\": An Ex-Preachers Reflection"
+    "title": "\"My Heavenly Home\": An Ex-Preachers Reflection",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-handsomest-drowned-man-in-the-world-and-myth-making.html",
-    "title": "\"The Handsomest Drowned Man in the World\" and Myth-Making"
+    "title": "\"The Handsomest Drowned Man in the World\" and Myth-Making",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-handsomest-drowned-man-in-the-world-and-myth-making-2.html",
-    "title": "\"The Handsomest Drowned Man in the World\" and Myth-Making 2"
+    "title": "\"The Handsomest Drowned Man in the World\" and Myth-Making 2",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-living-anitos-refashioning-tradition-performing-ethnicity.html",
-    "title": "\"The Living Anitos\": Refashioning Tradition, Performing Ethnicity"
+    "title": "\"The Living Anitos\": Refashioning Tradition, Performing Ethnicity",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "a-brown-mans-burden.html",
-    "title": "A Brown Man's Burden"
+    "title": "A Brown Man's Burden",
+    "category": "papers",
+    "review_status": "reviewed",
+    "tags": []
   },
   {
     "file": "a-prodigal-indigene-locating-myself-in-colonialism.html",
-    "title": "A Prodigal Indigene: Locating Myself in Colonialism"
+    "title": "A Prodigal Indigene: Locating Myself in Colonialism",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "a-proselyters-zeal.html",
-    "title": "A Proselyter's Zeal"
+    "title": "A Proselyter's Zeal",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cnf-abang-tony.html",
-    "title": "Abang Tony"
+    "title": "Abang Tony",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "are-kalingas-and-tingguians-ethnically-one.html",
-    "title": "Are Kalingas and Tingguians Ethnically One?"
+    "title": "Are Kalingas and Tingguians Ethnically One?",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "augustus-ulat-saboy-papers-cb-villanueva.html",
-    "title": "Augustus Ulat Saboy Papers at UP Baguio  by C.B. Villanueva"
+    "title": "Augustus Ulat Saboy Papers at UP Baguio  by C.B. Villanueva",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "taiwan-diary-aus.html",
-    "title": "Augustus Ulat Saboy's Taiwan Diary"
+    "title": "Augustus Ulat Saboy's Taiwan Diary",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "aus.html",
-    "title": "AUS (Augustus \"Gus\" Ulast Saboy)"
+    "title": "AUS (Augustus \"Gus\" Ulast Saboy)",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "awong-chi-gangsa-a-bad-idea.html",
-    "title": "Awong Chi Gangsa \"A BAD IDEA\"?"
+    "title": "Awong Chi Gangsa \"A BAD IDEA\"?",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "baguio-reads-carlos-p-romulo-that-thing-about-igorots.html",
-    "title": "Baguio Reads Carlos P. Romulo: That Thing About Igorots"
+    "title": "Baguio Reads Carlos P. Romulo: That Thing About Igorots",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "balbalasang-its-you-aus.html",
-    "title": "Balbalasang, It's You"
+    "title": "Balbalasang, It's You",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "banao-bodong-tribal-association.html",
-    "title": "Banao Bodong Tribal Association"
+    "title": "Banao Bodong Tribal Association",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "book-review-doing-theology-in-the-philippines.html",
-    "title": "Book Review: Doing Theology in the Philippines"
+    "title": "Book Review: Doing Theology in the Philippines",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "book-review-fragments-of-a-citys-history.html",
-    "title": "Book Review: Fragments of a City's History"
+    "title": "Book Review: Fragments of a City's History",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "book-review-hebrews-ancient-encouragement-for-believers-today.html",
-    "title": "Book Review: Hebrews: Ancient Encouragement for Believers Today"
+    "title": "Book Review: Hebrews: Ancient Encouragement for Believers Today",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "burning-cultural-artifacts-a-biblical-mandate.html",
-    "title": "Burning Cultural Artifacts: A Biblical Mandate?"
+    "title": "Burning Cultural Artifacts: A Biblical Mandate?",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "church-less-in-the-time-of-corona.html",
-    "title": "Church-less in the Time of 'Corona'"
+    "title": "Church-less in the Time of 'Corona'",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "churya-and-kidla-a-glimpse-of-bontoc-worldview.html",
-    "title": "CHURYA AND KIDLA: A GLIMPSE OF BONTOC WORLDVIEW"
+    "title": "CHURYA AND KIDLA: A GLIMPSE OF BONTOC WORLDVIEW",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cnf.html",
-    "title": "CNF by Scott Saboy"
+    "title": "CNF by Scott Saboy",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "conrado-ka-ambo-balweg-vanaw-rebel-priest.html",
-    "title": "Conrado Ka Ambo Balweg, Vanaw Rebel Priest"
+    "title": "Conrado Ka Ambo Balweg, Vanaw Rebel Priest",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cordillera-indigenous-music-2-by-am-saboy.html",
-    "title": "Cordillera Indigenous Music"
+    "title": "Cordillera Indigenous Music",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "creative-business-names-filipino-style.html",
-    "title": "Creative Business Names - Filipino Style"
+    "title": "Creative Business Names - Filipino Style",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cnf-diana.html",
-    "title": "Creative NonFiction: Diana"
+    "title": "Creative NonFiction: Diana",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "deconverting-from-sectarianism-the-one-and-only-true-church.html",
-    "title": "Deconverting from Sectarianism: \"The One and Only True Church\""
+    "title": "Deconverting from Sectarianism: \"The One and Only True Church\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "deconverting-from-sectarianism-a-culture-of-hate.html",
-    "title": "Deconverting from Sectarianism: A Culture of Hate"
+    "title": "Deconverting from Sectarianism: A Culture of Hate",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "deconverting-from-sectarianism-being-liberal-or-conservative.html",
-    "title": "Deconverting from Sectarianism: Being \"Liberal\" or \"Conservative\""
+    "title": "Deconverting from Sectarianism: Being \"Liberal\" or \"Conservative\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "deconverting-from-sectarianism-breaking-free-from-an-ideological-bubble.html",
-    "title": "Deconverting from Sectarianism: Breaking Free from an Ideological Bubble"
+    "title": "Deconverting from Sectarianism: Breaking Free from an Ideological Bubble",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "devangelized-the-pastor-is-always-right.html",
-    "title": "dEvangelized: \"The Pastor is Always Right\""
+    "title": "dEvangelized: \"The Pastor is Always Right\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "devangelized-childhood-indoctrination-in-a-fundamentalist-church.html",
-    "title": "dEvangelized: Childhood Indoctrination in a Fundamentalist Church"
+    "title": "dEvangelized: Childhood Indoctrination in a Fundamentalist Church",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "devangelized-childhood-indoctrination-in-a-fundamentalist-church-2.html",
-    "title": "dEvangelized: Childhood Indoctrination in a Fundamentalist Church 2"
+    "title": "dEvangelized: Childhood Indoctrination in a Fundamentalist Church 2",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "doland-trump-and-his-sacred-text-the-vestas.html",
-    "title": "Doland Trump and His Sacred Text, the Vestas"
+    "title": "Doland Trump and His Sacred Text, the Vestas",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cnf-efrenia-maclean.html",
-    "title": "Efrenia Maclean"
+    "title": "Efrenia Maclean",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "hajit-anak-un-innalan-ji-alan-brent-banganan.html",
-    "title": "Folktale as told by Brent Banganan"
+    "title": "Folktale as told by Brent Banganan",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "folktales-of-the-vanaws.html",
-    "title": "Folktales of the Vanaws by Yoneno-Reyes, Saboy and Reid"
+    "title": "Folktales of the Vanaws by Yoneno-Reyes, Saboy and Reid",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "hail-to-bibak.html",
-    "title": "Hail to BIBAK"
+    "title": "Hail to BIBAK",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "history-of-balbalasang.html",
-    "title": "History of Balbalasang"
+    "title": "History of Balbalasang",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "homma-on-hiroshima-war-crimes-and-politics.html",
-    "title": "Homma on Hiroshima: War Crimes and Politics"
+    "title": "Homma on Hiroshima: War Crimes and Politics",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "hungduan-the-unsung-municipality-of-ifugao.html",
-    "title": "Hungduan in World History"
+    "title": "Hungduan in World History",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "ielts-tutorial.html",
-    "title": "IELTS TUTORIAL"
+    "title": "IELTS TUTORIAL",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "imlang-kan-kasiguwan-by-portia-banganan-.html",
-    "title": "Imlang Kan Kasiguwan by Portia Banganan"
+    "title": "Imlang Kan Kasiguwan by Portia Banganan",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "instaphotoetry.html",
-    "title": "Instaphotoetry"
+    "title": "Instaphotoetry",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "intertextuality-bricolage-and-a-sense-of-the-fragmentary-in-la-visa-loca.html",
-    "title": "Intertextuality, Bricolage, and a Sense of the Fragmentary in La Visa Loca"
+    "title": "Intertextuality, Bricolage, and a Sense of the Fragmentary in La Visa Loca",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "tabuk-citihood-augustus-ulat-saboy.html",
-    "title": "Journalist Augustus Ulat Saboy Notes on the citihood ofTabuk"
+    "title": "Journalist Augustus Ulat Saboy Notes on the citihood ofTabuk",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "kalinga-hero-juan-duyan.html",
-    "title": "Juan Duyan, Kalinga Hero"
+    "title": "Juan Duyan, Kalinga Hero",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-kalinga-and-isneg-way-of-life.html",
-    "title": "Kalinga and Isneg Way of Life"
+    "title": "Kalinga and Isneg Way of Life",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "kalinga-hero-camilo-lammawin.html",
-    "title": "Kalinga Hero: Camilo Lammawin"
+    "title": "Kalinga Hero: Camilo Lammawin",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "kanu-and-noka-in-kalinga-oral-tradition.html",
-    "title": "KANU & NOKA in Kalinga Oral Tradition"
+    "title": "KANU & NOKA in Kalinga Oral Tradition",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "kultura-panggop-si-minatoy-norman-daipan.html",
-    "title": "Kultura Panggop Si Minatoy Norman Daipan"
+    "title": "Kultura Panggop Si Minatoy Norman Daipan",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "lagutaws-revolt-an-inspirational-tragedy.html",
-    "title": "Lagutaw's Revolt: An Inspirational Tragedy"
+    "title": "Lagutaw's Revolt: An Inspirational Tragedy",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "layad-nen-likhatan-cordilleras-most-popular-song.html",
-    "title": "Layad Nen Likhatan: Cordillera's Most Popular Song"
+    "title": "Layad Nen Likhatan: Cordillera's Most Popular Song",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "nan-layad-nen-likhatan-love-song-of-the-igorots.html",
-    "title": "Layad Nen Likhatan: Love Song of the Igorots"
+    "title": "Layad Nen Likhatan: Love Song of the Igorots",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "lemmings-jealous-gods-and-chosen-people-understanding-the-myths-behind-israels-exceptionalism.html",
-    "title": "Lemming's \"Jealous Gods and Chosen People\": Understanding the Myths Behind Israel's Exceptionalism"
+    "title": "Lemming's \"Jealous Gods and Chosen People\": Understanding the Myths Behind Israel's Exceptionalism",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "tribal-peacemaking-luis-ao-as.html",
-    "title": "Luis Ao-as"
+    "title": "Luis Ao-as",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "maba-ay-20-igorot-hunter-dc-and-marvel-heroes-and-local-entrepreneurs.html",
-    "title": "Maba-ay 2.0: Igorot Hunter, DC & Marvel Heroes, and Local Entrepreneurs"
+    "title": "Maba-ay 2.0: Igorot Hunter, DC & Marvel Heroes, and Local Entrepreneurs",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "barrio-mainit-the-hamlet-where-hot-springs-abound.html",
-    "title": "Mainit Hot Springs"
+    "title": "Mainit Hot Springs",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "make-your-own-crossword-puzzle-with-ms-excel.html",
-    "title": "Make Your Own Crossword Puzzle with MS Excel"
+    "title": "Make Your Own Crossword Puzzle with MS Excel",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "matatagun-anitu-living-anito.html",
-    "title": "Matatagun Anitu"
+    "title": "Matatagun Anitu",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "monroe-taclawan-vanaw-chanter.html",
-    "title": "Monroe Taclawan: Vanaw Chanter"
+    "title": "Monroe Taclawan: Vanaw Chanter",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "speaking-out-no-scalpel-vasectomy.html",
-    "title": "No-Scalpel Vasectomy"
+    "title": "No-Scalpel Vasectomy",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "notable-quotes-from-kingdom-of-heaven.html",
-    "title": "Notable Quotes from \"Kingdom of Heaven\""
+    "title": "Notable Quotes from \"Kingdom of Heaven\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "notable-quotes-from-sweet-tooth.html",
-    "title": "Notable Quotes from \"Sweet Tooth\""
+    "title": "Notable Quotes from \"Sweet Tooth\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "notable-quotes-from-the-blacklist.html",
-    "title": "Notable Quotes from \"The Blacklist\""
+    "title": "Notable Quotes from \"The Blacklist\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "notable-quotes-from-the-story-of-god-beyond-death-by-morgan-freeman.html",
-    "title": "Notable Quotes from \"The Story of God: Beyond Death\" by Morgan Freeman"
+    "title": "Notable Quotes from \"The Story of God: Beyond Death\" by Morgan Freeman",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "notable-quotes-from-the-umbrella-academy.html",
-    "title": "Notable Quotes from \"The Umbrella Academy\""
+    "title": "Notable Quotes from \"The Umbrella Academy\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "notable-quotes-from-v-is-for-vendettta.html",
-    "title": "Notable Quotes from \"V is for Vendettta\""
+    "title": "Notable Quotes from \"V is for Vendettta\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "notable-quotes-from-murakamis-birthday-girl.html",
-    "title": "Notable Quotes from Murakami's \"Birthday Girl\""
+    "title": "Notable Quotes from Murakami's \"Birthday Girl\"",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-pagta-kalingas-no-1-contribution-to-our-national-cultural-treasure.html",
-    "title": "Pagta: Kalinga's No. 1 Contribution to Philippine Culture"
+    "title": "Pagta: Kalinga's No. 1 Contribution to Philippine Culture",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "paperspublications.html",
-    "title": "Papers/Publications"
+    "title": "Papers/Publications",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "patukan-the-legend-of-the-sleeping-beauty-mountain.html",
-    "title": "Patukan: Sleeping Beauty Mountain Legend"
+    "title": "Patukan: Sleeping Beauty Mountain Legend",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "philippine-embassy-to-hold-on-the-spot-essay-writing-and-poster-making-competition.html",
-    "title": "Philippine Embassy to Hold on-the-Spot Essay Writing and Poster Making Competition"
+    "title": "Philippine Embassy to Hold on-the-Spot Essay Writing and Poster Making Competition",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "pinikpikan-and-dinuguan-christian-fundamentalism-and-philippine-culture.html",
-    "title": "Pinikpikan & Dinuguan: Christian Fundamentalism & Philippine Culture"
+    "title": "Pinikpikan & Dinuguan: Christian Fundamentalism & Philippine Culture",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "pioneering-a-life-for-the-stouthearted-and-the-adventurous.html",
-    "title": "Pioneering by Gus Saboy"
+    "title": "Pioneering by Gus Saboy",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "poetry.html",
-    "title": "Poetry by Scott Saboy"
+    "title": "Poetry by Scott Saboy",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "pu-un-genealogies.html",
-    "title": "Pu-un Genealogies"
+    "title": "Pu-un Genealogies",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "quibolloy-and-the-quake.html",
-    "title": "Quibolloy and the Quake"
+    "title": "Quibolloy and the Quake",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "rainmaking-in-bontoc.html",
-    "title": "Rainmaking in Bontoc"
+    "title": "Rainmaking in Bontoc",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "reflection-on-spiritual-grounding.html",
-    "title": "Reflection on \"Spiritual Grounding\""
+    "title": "Reflection on \"Spiritual Grounding\"",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cnf-requiem-for-a-pine-tree.html",
-    "title": "Requiem for a Pine Tree"
+    "title": "Requiem for a Pine Tree",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "gus-response-to-eulogies.html",
-    "title": "Response to Eulogies for Augustus \"Gus\" Ulat Saboy"
+    "title": "Response to Eulogies for Augustus \"Gus\" Ulat Saboy",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "romy-tangbawan-scribe-of-the-tribe.html",
-    "title": "Romy Tangbawan: Scribe of the Tribe"
+    "title": "Romy Tangbawan: Scribe of the Tribe",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "sadanga-land-of-the-kadangyans.html",
-    "title": "Sadanga Land of the Kadangyans"
+    "title": "Sadanga Land of the Kadangyans",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "saint-google-and-father-facebook.html",
-    "title": "Saint Google and Father Facebook"
+    "title": "Saint Google and Father Facebook",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "samuel-seridio-an-ex-preachers-salutes-to-a-lifelong-preacher.html",
-    "title": "Samuel Seridio: An Ex-preacher's Salutes to a Lifelong Preacher"
+    "title": "Samuel Seridio: An Ex-preacher's Salutes to a Lifelong Preacher",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "scott-saboy-blog.html",
-    "title": "Scott Saboy Blog"
+    "title": "Scott Saboy Blog",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "scott-saboy-poems.html",
-    "title": "Scott Saboy poems"
+    "title": "Scott Saboy poems",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "should-tribe-be-used-by-cordilleran-ip-groups.html",
-    "title": "Should \"Tribe\" Be Used by Cordilleran IP Groups?"
+    "title": "Should \"Tribe\" Be Used by Cordilleran IP Groups?",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "st-pauls-mission-diamond-jubilee-song-aus.html",
-    "title": "St Pauls Mission Diamond Jubilee Song"
+    "title": "St Pauls Mission Diamond Jubilee Song",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "venture-to-harmony-the-sumadel-butbut-bodong.html",
-    "title": "Sumadel-Butbut Bodong"
+    "title": "Sumadel-Butbut Bodong",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "sumadel-butbut-conflict-letter-to-ireneo-uyam.html",
-    "title": "Sumadel-Butbut Coflict"
+    "title": "Sumadel-Butbut Coflict",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "sumadel-butbut-conflict-aus.html",
-    "title": "Sumadel-Butbut Peace Pact"
+    "title": "Sumadel-Butbut Peace Pact",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cnf-tani-ato.html",
-    "title": "Tani Ato and Typhoon Pepeng"
+    "title": "Tani Ato and Typhoon Pepeng",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "teaching-death-by-scrabble-with-scrabble.html",
-    "title": "Teaching \"Death by Scrabble\" with Scrabble"
+    "title": "Teaching \"Death by Scrabble\" with Scrabble",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-aguinaldo-centennial-march.html",
-    "title": "The Aguinaldo Centennial March"
+    "title": "The Aguinaldo Centennial March",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-banaos-by-am-saboy-and-au-saboy.html",
-    "title": "The Banaos by Augustus and Anatalia Saboy"
+    "title": "The Banaos by Augustus and Anatalia Saboy",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-bodong-has-no-ideology.html",
-    "title": "The Bodong Has No Ideology"
+    "title": "The Bodong Has No Ideology",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-iglesia-ni-cristos-exclusivist-discourse-the-angel-from-the-east.html",
-    "title": "The Iglesia Ni Cristo's Exclusivist Discourse: The Angel from the East"
+    "title": "The Iglesia Ni Cristo's Exclusivist Discourse: The Angel from the East",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-indigene-as-divergent-and-factionless.html",
-    "title": "The Indigene as Divergent and Factionless"
+    "title": "The Indigene as Divergent and Factionless",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-ullalim-festival-of-kalinga.html",
-    "title": "The Ullalim Festival of Kalinga"
+    "title": "The Ullalim Festival of Kalinga",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-wild-man-of-balbalasang.html",
-    "title": "The Wild Man of Balbalasang"
+    "title": "The Wild Man of Balbalasang",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "this-preaching-business.html",
-    "title": "This Preaching Business"
+    "title": "This Preaching Business",
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "ullalim-sogsogna.html",
-    "title": "Ullalim - Sogsogna"
+    "title": "Ullalim - Sogsogna",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "youngblood-paniyaw.html",
-    "title": "Using Culture for Begging is Paniyaw"
+    "title": "Using Culture for Begging is Paniyaw",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "more-documents-about-the-vanaw.html",
-    "title": "Vanaw documents"
+    "title": "Vanaw documents",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "vanaw.html",
-    "title": "Vanaw Indigenous Community"
+    "title": "Vanaw Indigenous Community",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "vinanaw.html",
-    "title": "Vinanaw or Vanaw language"
+    "title": "Vinanaw or Vanaw language",
+    "category": "language",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "voicing-ethnicity.html",
-    "title": "Voicing Ethnicity: Traditional Referentiality"
+    "title": "Voicing Ethnicity: Traditional Referentiality",
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "volayang-kan-gawan-adolfo-bawanta.html",
-    "title": "Volayang Kan Gawan  y Adolfo Bawanta"
+    "title": "Volayang Kan Gawan  y Adolfo Bawanta",
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   }
 ]

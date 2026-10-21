@@ -9,3 +9,12 @@
 
 /* Memorial navigation remains readable on two rows. */
 .nav-links a{flex-shrink:0}
+
+/* Phase 2: deliberate, accessible two-row TUVYAN navigation. */
+.nav .tuvyan-nav-rows{display:flex;flex-direction:column;align-items:center;gap:0;padding:4px 0}
+.nav .tuvyan-nav-row{width:100%;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2px 24px;overflow:visible;white-space:normal}
+.nav .tuvyan-nav-row + .tuvyan-nav-row{border-top:1px solid rgba(255,255,255,.20)}
+.nav .tuvyan-nav-row a{display:inline-block;font-size:clamp(15px,1.3vw,17px);font-weight:600;line-height:1.4;padding:12px 2px;white-space:normal;text-align:center;text-underline-offset:4px}
+.nav .tuvyan-nav-row a:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:3px}
+@media(max-width:700px){.nav .tuvyan-nav-row{gap:0 15px}.nav .tuvyan-nav-row a{font-size:15px;padding:10px 2px}}
+@media(max-width:390px){.nav .tuvyan-nav-row{gap:0 10px}.nav .tuvyan-nav-row a{font-size:14px}}

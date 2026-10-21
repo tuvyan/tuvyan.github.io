@@ -18,3 +18,19 @@
 .nav .tuvyan-nav-row a:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:3px}
 @media(max-width:700px){.nav .tuvyan-nav-row{gap:0 15px}.nav .tuvyan-nav-row a{font-size:15px;padding:10px 2px}}
 @media(max-width:390px){.nav .tuvyan-nav-row{gap:0 10px}.nav .tuvyan-nav-row a{font-size:14px}}
+
+
+/* Phase 2 mobile refinements: scoped to homepage masthead and hero. */
+@media (max-width:700px) {
+  .mast-inner { gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+  .mast-actions { gap: 10px; align-items:stretch; }
+  .mast-actions .searchbox { flex: 1 1 100%; min-width: 0; }
+  .mast-actions .searchbox input { flex: 1 1 auto; min-width: 0; width: 100%; font-size: 16px; }
+  .mast-actions .searchbox button { flex: 0 0 auto; padding: 11px 15px; }
+  .mast-actions .subscribe { display:inline-flex; align-items:center; justify-content:center; align-self:flex-start; padding:10px 15px; }
+  .hero { padding-top: 48px; padding-bottom: 58px; }
+}
+@media (max-width:390px) {
+  .mast-actions .searchbox button { padding-inline: 11px; }
+  .hero { padding-top: 38px; padding-bottom: 48px; }
+}

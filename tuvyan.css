@@ -6,3 +6,6 @@
 .nav-links{flex-wrap:wrap;justify-content:center;column-gap:24px;row-gap:0;overflow-x:visible;white-space:normal}
 .nav-links a{display:inline-block;white-space:normal;text-align:center}
 @media(max-width:540px){.nav-links{column-gap:14px}.nav-links a{font-size:12px;padding:10px 0}}
+
+/* Memorial navigation remains readable on two rows. */
+.nav-links a{flex-shrink:0}

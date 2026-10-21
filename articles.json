@@ -5,34 +5,23 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2010-12-18",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2019-09-19",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "bagong-lipunan-an-ofws-view.html",
     "title": "\"Bagong Lipunan\": An OFW's View",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "brief-less-in-the-sea-games-igorot-attire-and-authenticity.html",
     "title": "\"Brief-less\" in the SEA Games:  Igorot  Attire and Authenticity",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2019-12-17",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "in-the-land-of-the-head-hunters-as-an-orientalist-text.html",
@@ -40,34 +29,23 @@
     "category": "papers",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2008-10-18",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "papers"
-    ]
+    "wordpress_archive_date": "2008-10-18",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "my-heavenly-home-an-ex-preachers-reflection.html",
     "title": "\"My Heavenly Home\": An Ex-Preachers Reflection",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "the-handsomest-drowned-man-in-the-world-and-myth-making.html",
     "title": "\"The Handsomest Drowned Man in the World\" and Myth-Making",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2019-10-05",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "the-handsomest-drowned-man-in-the-world-and-myth-making-2.html",
@@ -75,10 +53,9 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2019-10-06",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "the-living-anitos-refashioning-tradition-performing-ethnicity.html",
@@ -86,46 +63,30 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2019-09-25",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "a-brown-mans-burden.html",
     "title": "A Brown Man's Burden",
     "category": "papers",
     "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "2014 bibliographic citation in article; exact day/month not established",
-    "publication_year": "2014",
-    "categories": [
-      "papers"
-    ]
+    "tags": []
   },
   {
     "file": "a-prodigal-indigene-locating-myself-in-colonialism.html",
     "title": "A Prodigal Indigene: Locating Myself in Colonialism",
-    "category": "papers",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "papers"
-    ],
-    "editorial_note": "Classification confirmed by site editor"
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "a-proselyters-zeal.html",
     "title": "A Proselyter's Zeal",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2008-09-06",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "cnf-abang-tony.html",
@@ -133,76 +94,47 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2007-12-29",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "are-kalingas-and-tingguians-ethnically-one.html",
     "title": "Are Kalingas and Tingguians Ethnically One?",
-    "category": "papers",
-    "review_status": "reviewed",
-    "tags": [],
-    "original_post_date": "2020-07-13",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "papers",
-      "heritage"
-    ],
-    "editorial_note": "Classification confirmed by site editor"
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "augustus-ulat-saboy-papers-cb-villanueva.html",
     "title": "Augustus Ulat Saboy Papers at UP Baguio  by C.B. Villanueva",
-    "category": "gus",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "gus",
-      "heritage"
-    ],
-    "editorial_note": "Gus Saboy collection: verify authorship and relation to Augustus Ulat Saboy"
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "taiwan-diary-aus.html",
     "title": "Augustus Ulat Saboy's Taiwan Diary",
-    "category": "gus",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "gus",
-      "heritage"
-    ],
-    "editorial_note": "Gus Saboy collection: verify authorship and relation to Augustus Ulat Saboy"
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "aus.html",
     "title": "AUS (Augustus \"Gus\" Ulast Saboy)",
-    "category": "gus",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "gus",
-      "heritage"
-    ],
-    "editorial_note": "Gus Saboy collection: verify authorship and relation to Augustus Ulat Saboy"
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "awong-chi-gangsa-a-bad-idea.html",
     "title": "Awong Chi Gangsa \"A BAD IDEA\"?",
-    "category": "blog",
-    "review_status": "reviewed",
+    "category": "heritage",
+    "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2014-02-28",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ],
-    "editorial_note": "Classification confirmed by site editor"
+    "wordpress_archive_date": "2014-02-28",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "baguio-reads-carlos-p-romulo-that-thing-about-igorots.html",
@@ -210,11 +142,9 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2021-04-18",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2021-04-16",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "balbalasang-its-you-aus.html",
@@ -222,57 +152,40 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2020-06-14",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "banao-bodong-tribal-association.html",
     "title": "Banao Bodong Tribal Association",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "book-review-doing-theology-in-the-philippines.html",
     "title": "Book Review: Doing Theology in the Philippines",
     "category": "papers",
-    "review_status": "provisional",
+    "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2008-01-01",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "papers"
-    ]
+    "wordpress_archive_date": "2008-01-01",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "book-review-fragments-of-a-citys-history.html",
     "title": "Book Review: Fragments of a City's History",
     "category": "papers",
-    "review_status": "provisional",
-    "tags": [],
-    "original_post_date": "2009-09-02",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "papers"
-    ]
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "book-review-hebrews-ancient-encouragement-for-believers-today.html",
     "title": "Book Review: Hebrews: Ancient Encouragement for Believers Today",
-    "category": "blog",
-    "review_status": "provisional",
-    "tags": [],
-    "original_post_date": "2009-03-22",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "burning-cultural-artifacts-a-biblical-mandate.html",
@@ -280,161 +193,100 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2008-02-10",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2008-10-12",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "church-less-in-the-time-of-corona.html",
     "title": "Church-less in the Time of 'Corona'",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2020-04-12",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "churya-and-kidla-a-glimpse-of-bontoc-worldview.html",
     "title": "CHURYA AND KIDLA: A GLIMPSE OF BONTOC WORLDVIEW",
-    "category": "blog",
-    "review_status": "reviewed",
-    "tags": [],
-    "original_post_date": "2008-09-06",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ],
-    "editorial_note": "Classification confirmed by site editor"
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cnf.html",
     "title": "CNF by Scott Saboy",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "conrado-ka-ambo-balweg-vanaw-rebel-priest.html",
     "title": "Conrado Ka Ambo Balweg, Vanaw Rebel Priest",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "cordillera-indigenous-music-2-by-am-saboy.html",
     "title": "Cordillera Indigenous Music",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "creative-business-names-filipino-style.html",
     "title": "Creative Business Names - Filipino Style",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "cnf-diana.html",
     "title": "Creative NonFiction: Diana",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "deconverting-from-sectarianism-the-one-and-only-true-church.html",
     "title": "Deconverting from Sectarianism: \"The One and Only True Church\"",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2008-05-06",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "deconverting-from-sectarianism-a-culture-of-hate.html",
     "title": "Deconverting from Sectarianism: A Culture of Hate",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2008-05-18",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "deconverting-from-sectarianism-being-liberal-or-conservative.html",
     "title": "Deconverting from Sectarianism: Being \"Liberal\" or \"Conservative\"",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2020-04-15",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "deconverting-from-sectarianism-breaking-free-from-an-ideological-bubble.html",
     "title": "Deconverting from Sectarianism: Breaking Free from an Ideological Bubble",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2008-04-26",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "devangelized-the-pastor-is-always-right.html",
     "title": "dEvangelized: \"The Pastor is Always Right\"",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "devangelized-childhood-indoctrination-in-a-fundamentalist-church.html",
     "title": "dEvangelized: Childhood Indoctrination in a Fundamentalist Church",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "devangelized-childhood-indoctrination-in-a-fundamentalist-church-2.html",
@@ -442,11 +294,9 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2020-09-08",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-09-08",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "doland-trump-and-his-sacred-text-the-vestas.html",
@@ -454,22 +304,16 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2020-02-24",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-02-24",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "cnf-efrenia-maclean.html",
     "title": "Efrenia Maclean",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "hajit-anak-un-innalan-ji-alan-brent-banganan.html",
@@ -477,21 +321,16 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2020-06-02",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "folktales-of-the-vanaws.html",
     "title": "Folktales of the Vanaws by Yoneno-Reyes, Saboy and Reid",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "hail-to-bibak.html",
@@ -499,21 +338,16 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-06-14",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "history-of-balbalasang.html",
     "title": "History of Balbalasang",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "homma-on-hiroshima-war-crimes-and-politics.html",
@@ -521,56 +355,37 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-08-07",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "hungduan-the-unsung-municipality-of-ifugao.html",
     "title": "Hungduan in World History",
-    "category": "blog",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ],
-    "editorial_note": "Classification confirmed by site editor"
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "ielts-tutorial.html",
     "title": "IELTS TUTORIAL",
-    "category": "blog",
-    "review_status": "provisional",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "category": "papers",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "imlang-kan-kasiguwan-by-portia-banganan-.html",
     "title": "Imlang Kan Kasiguwan by Portia Banganan",
-    "category": "heritage",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ],
-    "editorial_note": "Classification confirmed by site editor"
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "instaphotoetry.html",
     "title": "Instaphotoetry",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "intertextuality-bricolage-and-a-sense-of-the-fragmentary-in-la-visa-loca.html",
@@ -578,72 +393,47 @@
     "category": "papers",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2009-05-25",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "papers"
-    ]
+    "wordpress_archive_date": "2009-05-25",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "tabuk-citihood-augustus-ulat-saboy.html",
     "title": "Journalist Augustus Ulat Saboy Notes on the citihood ofTabuk",
-    "category": "gus",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "gus",
-      "heritage"
-    ],
-    "editorial_note": "Gus Saboy collection: verify authorship and relation to Augustus Ulat Saboy"
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "kalinga-hero-juan-duyan.html",
     "title": "Juan Duyan, Kalinga Hero",
-    "category": "gus",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "gus",
-      "heritage"
-    ],
-    "editorial_note": "Classification confirmed by site editor"
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "the-kalinga-and-isneg-way-of-life.html",
     "title": "Kalinga and Isneg Way of Life",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "kalinga-hero-camilo-lammawin.html",
     "title": "Kalinga Hero: Camilo Lammawin",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2012-06-12",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "kanu-and-noka-in-kalinga-oral-tradition.html",
     "title": "KANU & NOKA in Kalinga Oral Tradition",
-    "category": "language",
-    "review_status": "provisional",
+    "category": "papers",
+    "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2020-07-12",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "language"
-    ]
+    "wordpress_archive_date": "2020-07-12",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "kultura-panggop-si-minatoy-norman-daipan.html",
@@ -651,10 +441,9 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2020-07-04",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "lagutaws-revolt-an-inspirational-tragedy.html",
@@ -662,55 +451,37 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2020-07-19",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-07-19",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "layad-nen-likhatan-cordilleras-most-popular-song.html",
     "title": "Layad Nen Likhatan: Cordillera's Most Popular Song",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "nan-layad-nen-likhatan-love-song-of-the-igorots.html",
     "title": "Layad Nen Likhatan: Love Song of the Igorots",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "lemmings-jealous-gods-and-chosen-people-understanding-the-myths-behind-israels-exceptionalism.html",
     "title": "Lemming's \"Jealous Gods and Chosen People\": Understanding the Myths Behind Israel's Exceptionalism",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "tribal-peacemaking-luis-ao-as.html",
     "title": "Luis Ao-as",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "maba-ay-20-igorot-hunter-dc-and-marvel-heroes-and-local-entrepreneurs.html",
@@ -718,10 +489,9 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2019-09-23",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "barrio-mainit-the-hamlet-where-hot-springs-abound.html",
@@ -729,10 +499,9 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2020-06-14",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "make-your-own-crossword-puzzle-with-ms-excel.html",
@@ -740,33 +509,23 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2020-08-10",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-08-09",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "matatagun-anitu-living-anito.html",
     "title": "Matatagun Anitu",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "monroe-taclawan-vanaw-chanter.html",
     "title": "Monroe Taclawan: Vanaw Chanter",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "speaking-out-no-scalpel-vasectomy.html",
@@ -774,22 +533,16 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2008-05-02",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "notable-quotes-from-kingdom-of-heaven.html",
     "title": "Notable Quotes from \"Kingdom of Heaven\"",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2008-04-25",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "notable-quotes-from-sweet-tooth.html",
@@ -797,11 +550,9 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2021-05-25",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2021-05-25",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "notable-quotes-from-the-blacklist.html",
@@ -809,115 +560,72 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2020-08-04",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-08-04",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "notable-quotes-from-the-story-of-god-beyond-death-by-morgan-freeman.html",
     "title": "Notable Quotes from \"The Story of God: Beyond Death\" by Morgan Freeman",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "notable-quotes-from-the-umbrella-academy.html",
     "title": "Notable Quotes from \"The Umbrella Academy\"",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2019-11-08",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "notable-quotes-from-v-is-for-vendettta.html",
     "title": "Notable Quotes from \"V is for Vendettta\"",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2020-08-20",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "notable-quotes-from-murakamis-birthday-girl.html",
     "title": "Notable Quotes from Murakami's \"Birthday Girl\"",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2021-01-22",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "the-pagta-kalingas-no-1-contribution-to-our-national-cultural-treasure.html",
     "title": "Pagta: Kalinga's No. 1 Contribution to Philippine Culture",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "paperspublications.html",
     "title": "Papers/Publications",
     "category": "papers",
-    "review_status": "provisional",
-    "tags": [],
-    "original_post_date": "2021-08-16",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "papers"
-    ]
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "patukan-the-legend-of-the-sleeping-beauty-mountain.html",
     "title": "Patukan: Sleeping Beauty Mountain Legend",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "philippine-embassy-to-hold-on-the-spot-essay-writing-and-poster-making-competition.html",
     "title": "Philippine Embassy to Hold on-the-Spot Essay Writing and Poster Making Competition",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "pinikpikan-and-dinuguan-christian-fundamentalism-and-philippine-culture.html",
     "title": "Pinikpikan & Dinuguan: Christian Fundamentalism & Philippine Culture",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2008-12-17",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "pioneering-a-life-for-the-stouthearted-and-the-adventurous.html",
@@ -925,32 +633,23 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-06-14",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "poetry.html",
     "title": "Poetry by Scott Saboy",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "pu-un-genealogies.html",
     "title": "Pu-un Genealogies",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "quibolloy-and-the-quake.html",
@@ -958,33 +657,23 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2019-11-02",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2019-11-02",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "rainmaking-in-bontoc.html",
     "title": "Rainmaking in Bontoc",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "reflection-on-spiritual-grounding.html",
     "title": "Reflection on \"Spiritual Grounding\"",
-    "category": "blog",
-    "review_status": "provisional",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "category": "heritage",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "cnf-requiem-for-a-pine-tree.html",
@@ -992,35 +681,23 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2008-06-21",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "gus-response-to-eulogies.html",
     "title": "Response to Eulogies for Augustus \"Gus\" Ulat Saboy",
-    "category": "gus",
-    "review_status": "reviewed",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "gus",
-      "heritage"
-    ],
-    "editorial_note": "Gus Saboy collection: verify authorship and relation to Augustus Ulat Saboy"
+    "category": "blog",
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "romy-tangbawan-scribe-of-the-tribe.html",
     "title": "Romy Tangbawan: Scribe of the Tribe",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2020-04-17",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "sadanga-land-of-the-kadangyans.html",
@@ -1028,10 +705,9 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-06-14",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "saint-google-and-father-facebook.html",
@@ -1039,55 +715,37 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2019-11-19",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "samuel-seridio-an-ex-preachers-salutes-to-a-lifelong-preacher.html",
     "title": "Samuel Seridio: An Ex-preacher's Salutes to a Lifelong Preacher",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "original_post_date": "2012-12-20",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "scott-saboy-blog.html",
     "title": "Scott Saboy Blog",
     "category": "blog",
-    "review_status": "provisional",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "scott-saboy-poems.html",
     "title": "Scott Saboy poems",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "should-tribe-be-used-by-cordilleran-ip-groups.html",
     "title": "Should \"Tribe\" Be Used by Cordilleran IP Groups?",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "st-pauls-mission-diamond-jubilee-song-aus.html",
@@ -1095,54 +753,37 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2020-06-14",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "venture-to-harmony-the-sumadel-butbut-bodong.html",
     "title": "Sumadel-Butbut Bodong",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "sumadel-butbut-conflict-letter-to-ireneo-uyam.html",
     "title": "Sumadel-Butbut Coflict",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "sumadel-butbut-conflict-aus.html",
     "title": "Sumadel-Butbut Peace Pact",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "cnf-tani-ato.html",
     "title": "Tani Ato and Typhoon Pepeng",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "teaching-death-by-scrabble-with-scrabble.html",
@@ -1150,43 +791,30 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2019-10-03",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "the-aguinaldo-centennial-march.html",
     "title": "The Aguinaldo Centennial March",
     "category": "blog",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "blog"
-    ]
+    "tags": []
   },
   {
     "file": "the-banaos-by-am-saboy-and-au-saboy.html",
     "title": "The Banaos by Augustus and Anatalia Saboy",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "the-bodong-has-no-ideology.html",
     "title": "The Bodong Has No Ideology",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "the-iglesia-ni-cristos-exclusivist-discourse-the-angel-from-the-east.html",
@@ -1194,11 +822,9 @@
     "category": "papers",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2009-07-20",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "papers"
-    ]
+    "wordpress_archive_date": "2019-09-21",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "the-indigene-as-divergent-and-factionless.html",
@@ -1206,32 +832,23 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2020-10-30",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "the-ullalim-festival-of-kalinga.html",
     "title": "The Ullalim Festival of Kalinga",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "the-wild-man-of-balbalasang.html",
     "title": "The Wild Man of Balbalasang",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "this-preaching-business.html",
@@ -1239,77 +856,51 @@
     "category": "blog",
     "review_status": "suggested",
     "tags": [],
-    "original_post_date": "2008-11-22",
-    "date_evidence": "Explicit 'Originally posted' statement in archived article",
-    "categories": [
-      "blog"
-    ]
+    "wordpress_archive_date": "2019-09-11",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   },
   {
     "file": "ullalim-sogsogna.html",
     "title": "Ullalim - Sogsogna",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "youngblood-paniyaw.html",
     "title": "Using Culture for Begging is Paniyaw",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "more-documents-about-the-vanaw.html",
     "title": "Vanaw documents",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "vanaw.html",
     "title": "Vanaw Indigenous Community",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "tags": []
   },
   {
     "file": "vinanaw.html",
     "title": "Vinanaw or Vanaw language",
     "category": "language",
-    "review_status": "provisional",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "language"
-    ]
+    "review_status": "suggested",
+    "tags": []
   },
   {
     "file": "voicing-ethnicity.html",
     "title": "Voicing Ethnicity: Traditional Referentiality",
     "category": "papers",
     "review_status": "suggested",
-    "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "papers"
-    ]
+    "tags": []
   },
   {
     "file": "volayang-kan-gawan-adolfo-bawanta.html",
@@ -1317,9 +908,8 @@
     "category": "heritage",
     "review_status": "suggested",
     "tags": [],
-    "date_evidence": "Not established from explicit original-post statement",
-    "categories": [
-      "heritage"
-    ]
+    "wordpress_archive_date": "2020-06-10",
+    "wordpress_date_source": "WordPress export 2022-07-26",
+    "date_note": "WordPress archive timestamp; not necessarily first publication"
   }
 ]

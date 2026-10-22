@@ -34,3 +34,18 @@
   .mast-actions .searchbox button { padding-inline: 11px; }
   .hero { padding-top: 38px; padding-bottom: 48px; }
 }
+
+/* Phase 2B: mobile masthead, archive links, and tap targets. */
+@media (max-width:700px) {
+  .mast-inner { gap: 10px; }
+  .mast-actions { width:100%; max-width:100%; display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+  .mast-actions .searchbox { display:flex; width:100%; max-width:100%; min-width:0; flex:1 1 100%; }
+  .mast-actions .searchbox input { min-width:0; width:0; flex:1 1 0; font-size:16px; text-overflow:ellipsis; }
+  .mast-actions .searchbox button { flex:0 0 auto; white-space:nowrap; }
+  .mast-actions .subscribe { flex:0 0 auto; margin:0; min-height:44px; }
+  .nav .tuvyan-nav-row a { min-height:42px; display:inline-flex; align-items:center; justify-content:center; }
+}
+@media (max-width:420px) {
+  .mast-actions .searchbox input { padding-inline:10px; }
+  .mast-actions .searchbox button { padding-inline:12px; }
+}

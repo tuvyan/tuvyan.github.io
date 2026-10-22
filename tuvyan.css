@@ -49,3 +49,12 @@
   .mast-actions .searchbox input { padding-inline:10px; }
   .mast-actions .searchbox button { padding-inline:12px; }
 }
+
+/* Phase 6G: balanced topic navigation — 3 × 2 desktop, centred responsive rows */
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1060px;margin:-36px auto 0;position:relative;align-items:stretch}
+.features a{min-width:0;min-height:205px;padding:25px 27px;display:flex;flex-direction:column;justify-content:flex-start;transition:transform .15s ease,box-shadow .15s ease}
+.features a:hover,.features a:focus-visible{transform:translateY(-3px);box-shadow:0 10px 28px #0002}
+.features h2{font-size:clamp(17px,1.65vw,22px);margin:16px 0 8px}
+.features p{font-size:14px;line-height:1.6}
+@media(max-width:760px){.features{grid-template-columns:repeat(2,minmax(0,1fr));max-width:650px;gap:14px;margin-top:24px}.features a{min-height:180px;padding:20px}}
+@media(max-width:460px){.features{grid-template-columns:1fr;max-width:360px}.features a{min-height:0;padding:20px}.features h2{margin:8px 0}.features p{margin-top:0}}

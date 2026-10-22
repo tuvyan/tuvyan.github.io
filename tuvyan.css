@@ -58,3 +58,21 @@
 .features p{font-size:14px;line-height:1.6}
 @media(max-width:760px){.features{grid-template-columns:repeat(2,minmax(0,1fr));max-width:650px;gap:14px;margin-top:24px}.features a{min-height:180px;padding:20px}}
 @media(max-width:460px){.features{grid-template-columns:1fr;max-width:360px}.features a{min-height:0;padding:20px}.features h2{margin:8px 0}.features p{margin-top:0}}
+
+/* Phase 6H: authentic Cordillera photograph as homepage hero backdrop. */
+.hero {
+  background-image:
+    linear-gradient(90deg, rgba(7,38,30,.90) 0%, rgba(7,38,30,.73) 43%, rgba(7,38,30,.26) 100%),
+    url('images/tuvyan-hero-cordillera-river.jpg');
+  background-size: cover;
+  background-position: center 48%;
+  background-repeat: no-repeat;
+  color: #fffaf0;
+}
+.hero h1 { color: #fffaf0; text-shadow: 0 2px 12px rgba(0,0,0,.25); }
+.hero p, .hero .eyebrow { color: #fffaf0; text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+.hero .primary { background: #f5e8ca; color: #123e31; border: 1px solid rgba(255,255,255,.55); }
+.hero .primary:hover, .hero .primary:focus-visible { background: #fffaf0; color: #123e31; }
+@media(max-width:700px) {
+  .hero { background-position: 58% center; }
+}

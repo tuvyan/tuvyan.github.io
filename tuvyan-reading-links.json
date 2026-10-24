@@ -1,0 +1,25 @@
+{
+  "series": [
+    {
+      "id": "devangelized-deconverting",
+      "name": "dEvangelized / Deconverting from Sectarianism",
+      "articles": [
+        "devangelized-the-pastor-is-always-right.html",
+        "devangelized-childhood-indoctrination-in-a-fundamentalist-church.html",
+        "devangelized-childhood-indoctrination-in-a-fundamentalist-church-2.html",
+        "deconverting-from-sectarianism-the-one-and-only-true-church.html",
+        "deconverting-from-sectarianism-a-culture-of-hate.html",
+        "deconverting-from-sectarianism-breaking-free-from-an-ideological-bubble.html",
+        "deconverting-from-sectarianism-being-liberal-or-conservative.html"
+      ]
+    }
+  ],
+  "related": {
+    "a-brown-mans-burden.html": [
+      "a-prodigal-indigene-locating-myself-in-colonialism.html"
+    ],
+    "a-prodigal-indigene-locating-myself-in-colonialism.html": [
+      "a-brown-mans-burden.html"
+    ]
+  }
+}

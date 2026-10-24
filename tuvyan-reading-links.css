@@ -1,0 +1,12 @@
+/* TUVYAN related reading, scoped to prevent interference with existing navigation */
+.tuvyan-reading-panel{max-width:1120px;margin:2rem auto;padding:0 1.2rem;color:#24372f;font-family:inherit}
+.tuvyan-reading-group{border:1px solid #d9e2da;border-radius:18px;background:#fafbf8;padding:1.35rem 1.5rem;margin:1rem 0}
+.tuvyan-reading-group h2{font-size:clamp(1.2rem,2.3vw,1.65rem);line-height:1.3;margin:.35rem 0 .5rem}
+.tuvyan-reading-eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;font-weight:700;color:#47765c;margin:0}
+.tuvyan-reading-position{font-size:.9rem;color:#56665c;margin:.25rem 0 1rem}
+.tuvyan-reading-nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:.8rem}
+.tuvyan-reading-link{display:flex;flex-direction:column;gap:.4rem;text-decoration:none;color:#233c30;background:#fff;border:1px solid #dce5dd;border-radius:12px;padding:1rem;overflow-wrap:anywhere}
+.tuvyan-reading-link:hover,.tuvyan-reading-link:focus-visible{border-color:#42775c;background:#f1f7f1;outline-offset:3px}
+.tuvyan-reading-kicker{font-size:.77rem;color:#54715f;font-weight:600}
+.tuvyan-reading-all{margin-top:1rem}.tuvyan-reading-all summary{cursor:pointer;font-weight:650;color:#315e45}.tuvyan-reading-all li{margin:.45rem 0;line-height:1.45}.tuvyan-reading-all a{color:#315e45}
+@media(max-width:600px){.tuvyan-reading-panel{padding:0 .85rem}.tuvyan-reading-group{padding:1rem}.tuvyan-reading-nav{grid-template-columns:1fr}}

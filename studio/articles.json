@@ -839,7 +839,11 @@
     "tags": [],
     "wordpress_archive_date": "2019-09-21",
     "wordpress_date_source": "WordPress export 2022-07-26",
-    "date_note": "WordPress archive timestamp; not necessarily first publication"
+    "date_note": "WordPress archive timestamp; not necessarily first publication",
+    "categories": [
+      "papers"
+    ],
+    "original_publication_date": "2019-09-21"
   },
   {
     "file": "the-indigene-as-divergent-and-factionless.html",

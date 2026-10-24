@@ -270,7 +270,10 @@
     "title": "Deconverting from Sectarianism: \"The One and Only True Church\"",
     "category": "blog",
     "review_status": "suggested",
-    "tags": []
+    "tags": [],
+    "categories": [
+      "blog"
+    ]
   },
   {
     "file": "deconverting-from-sectarianism-a-culture-of-hate.html",

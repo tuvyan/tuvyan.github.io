@@ -10,3 +10,7 @@
 .tuvyan-reading-kicker{font-size:.77rem;color:#54715f;font-weight:600}
 .tuvyan-reading-all{margin-top:1rem}.tuvyan-reading-all summary{cursor:pointer;font-weight:650;color:#315e45}.tuvyan-reading-all li{margin:.45rem 0;line-height:1.45}.tuvyan-reading-all a{color:#315e45}
 @media(max-width:600px){.tuvyan-reading-panel{padding:0 .85rem}.tuvyan-reading-group{padding:1rem}.tuvyan-reading-nav{grid-template-columns:1fr}}
+
+/* Phase 15: visually distinguish unreviewed title-based suggestions */
+.tuvyan-reading-suggested{background:#f6f7f4;border-style:dashed}
+.tuvyan-reading-suggested .tuvyan-reading-eyebrow{color:#657065}

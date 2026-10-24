@@ -1,0 +1,168 @@
+{
+  "version": "2026-10-24-phase11",
+  "method": "shared distinctive title words (2+), plus manually confirmed pairs",
+  "links": {
+    "the-handsomest-drowned-man-in-the-world-and-myth-making.html": [
+      "the-handsomest-drowned-man-in-the-world-and-myth-making-2.html"
+    ],
+    "the-handsomest-drowned-man-in-the-world-and-myth-making-2.html": [
+      "the-handsomest-drowned-man-in-the-world-and-myth-making.html"
+    ],
+    "music-archive/anatalia-magkachi-saboy-biography.html": [
+      "the-banaos-by-am-saboy-and-au-saboy.html"
+    ],
+    "augustus-ulat-saboy-papers-cb-villanueva.html": [
+      "aus.html",
+      "taiwan-diary-aus.html",
+      "gus-response-to-eulogies.html",
+      "tabuk-citihood-augustus-ulat-saboy.html",
+      "the-banaos-by-am-saboy-and-au-saboy.html"
+    ],
+    "taiwan-diary-aus.html": [
+      "aus.html",
+      "gus-response-to-eulogies.html",
+      "tabuk-citihood-augustus-ulat-saboy.html",
+      "augustus-ulat-saboy-papers-cb-villanueva.html",
+      "the-banaos-by-am-saboy-and-au-saboy.html"
+    ],
+    "aus.html": [
+      "taiwan-diary-aus.html",
+      "gus-response-to-eulogies.html",
+      "tabuk-citihood-augustus-ulat-saboy.html",
+      "augustus-ulat-saboy-papers-cb-villanueva.html",
+      "the-banaos-by-am-saboy-and-au-saboy.html"
+    ],
+    "book-review-doing-theology-in-the-philippines.html": [
+      "book-review-fragments-of-a-citys-history.html",
+      "book-review-hebrews-ancient-encouragement-for-believers-today.html"
+    ],
+    "book-review-fragments-of-a-citys-history.html": [
+      "book-review-doing-theology-in-the-philippines.html",
+      "book-review-hebrews-ancient-encouragement-for-believers-today.html"
+    ],
+    "book-review-hebrews-ancient-encouragement-for-believers-today.html": [
+      "book-review-fragments-of-a-citys-history.html",
+      "book-review-doing-theology-in-the-philippines.html"
+    ],
+    "cnf.html": [
+      "scott-saboy-poems.html",
+      "scott-saboy-blog.html",
+      "poetry.html"
+    ],
+    "tabuk-citihood-augustus-ulat-saboy.html": [
+      "aus.html",
+      "taiwan-diary-aus.html",
+      "gus-response-to-eulogies.html",
+      "augustus-ulat-saboy-papers-cb-villanueva.html",
+      "the-banaos-by-am-saboy-and-au-saboy.html"
+    ],
+    "kalinga-hero-juan-duyan.html": [
+      "kalinga-hero-camilo-lammawin.html"
+    ],
+    "kalinga-hero-camilo-lammawin.html": [
+      "kalinga-hero-juan-duyan.html"
+    ],
+    "layad-nen-likhatan-cordilleras-most-popular-song.html": [
+      "nan-layad-nen-likhatan-love-song-of-the-igorots.html"
+    ],
+    "nan-layad-nen-likhatan-love-song-of-the-igorots.html": [
+      "layad-nen-likhatan-cordilleras-most-popular-song.html"
+    ],
+    "notable-quotes-from-kingdom-of-heaven.html": [
+      "notable-quotes-from-v-is-for-vendettta.html",
+      "notable-quotes-from-the-blacklist.html",
+      "notable-quotes-from-the-umbrella-academy.html",
+      "notable-quotes-from-sweet-tooth.html",
+      "notable-quotes-from-murakamis-birthday-girl.html"
+    ],
+    "notable-quotes-from-sweet-tooth.html": [
+      "notable-quotes-from-v-is-for-vendettta.html",
+      "notable-quotes-from-the-blacklist.html",
+      "notable-quotes-from-the-umbrella-academy.html",
+      "notable-quotes-from-kingdom-of-heaven.html",
+      "notable-quotes-from-murakamis-birthday-girl.html"
+    ],
+    "notable-quotes-from-the-blacklist.html": [
+      "notable-quotes-from-v-is-for-vendettta.html",
+      "notable-quotes-from-the-umbrella-academy.html",
+      "notable-quotes-from-sweet-tooth.html",
+      "notable-quotes-from-kingdom-of-heaven.html",
+      "notable-quotes-from-murakamis-birthday-girl.html"
+    ],
+    "notable-quotes-from-the-story-of-god-beyond-death-by-morgan-freeman.html": [
+      "notable-quotes-from-v-is-for-vendettta.html",
+      "notable-quotes-from-the-blacklist.html",
+      "notable-quotes-from-the-umbrella-academy.html",
+      "notable-quotes-from-sweet-tooth.html",
+      "notable-quotes-from-kingdom-of-heaven.html"
+    ],
+    "notable-quotes-from-the-umbrella-academy.html": [
+      "notable-quotes-from-v-is-for-vendettta.html",
+      "notable-quotes-from-the-blacklist.html",
+      "notable-quotes-from-sweet-tooth.html",
+      "notable-quotes-from-kingdom-of-heaven.html",
+      "notable-quotes-from-murakamis-birthday-girl.html"
+    ],
+    "notable-quotes-from-v-is-for-vendettta.html": [
+      "notable-quotes-from-the-blacklist.html",
+      "notable-quotes-from-the-umbrella-academy.html",
+      "notable-quotes-from-sweet-tooth.html",
+      "notable-quotes-from-kingdom-of-heaven.html",
+      "notable-quotes-from-murakamis-birthday-girl.html"
+    ],
+    "notable-quotes-from-murakamis-birthday-girl.html": [
+      "notable-quotes-from-v-is-for-vendettta.html",
+      "notable-quotes-from-the-blacklist.html",
+      "notable-quotes-from-the-umbrella-academy.html",
+      "notable-quotes-from-sweet-tooth.html",
+      "notable-quotes-from-kingdom-of-heaven.html"
+    ],
+    "the-pagta-kalingas-no-1-contribution-to-our-national-cultural-treasure.html": [
+      "pinikpikan-and-dinuguan-christian-fundamentalism-and-philippine-culture.html"
+    ],
+    "pinikpikan-and-dinuguan-christian-fundamentalism-and-philippine-culture.html": [
+      "the-pagta-kalingas-no-1-contribution-to-our-national-cultural-treasure.html"
+    ],
+    "poetry.html": [
+      "cnf.html",
+      "scott-saboy-poems.html",
+      "scott-saboy-blog.html"
+    ],
+    "gus-response-to-eulogies.html": [
+      "aus.html",
+      "taiwan-diary-aus.html",
+      "tabuk-citihood-augustus-ulat-saboy.html",
+      "augustus-ulat-saboy-papers-cb-villanueva.html",
+      "the-banaos-by-am-saboy-and-au-saboy.html"
+    ],
+    "scott-saboy-blog.html": [
+      "cnf.html",
+      "scott-saboy-poems.html",
+      "poetry.html"
+    ],
+    "scott-saboy-poems.html": [
+      "cnf.html",
+      "scott-saboy-blog.html",
+      "poetry.html"
+    ],
+    "venture-to-harmony-the-sumadel-butbut-bodong.html": [
+      "sumadel-butbut-conflict-letter-to-ireneo-uyam.html",
+      "sumadel-butbut-conflict-aus.html"
+    ],
+    "sumadel-butbut-conflict-letter-to-ireneo-uyam.html": [
+      "venture-to-harmony-the-sumadel-butbut-bodong.html",
+      "sumadel-butbut-conflict-aus.html"
+    ],
+    "sumadel-butbut-conflict-aus.html": [
+      "venture-to-harmony-the-sumadel-butbut-bodong.html",
+      "sumadel-butbut-conflict-letter-to-ireneo-uyam.html"
+    ],
+    "the-banaos-by-am-saboy-and-au-saboy.html": [
+      "aus.html",
+      "taiwan-diary-aus.html",
+      "gus-response-to-eulogies.html",
+      "tabuk-citihood-augustus-ulat-saboy.html",
+      "music-archive/anatalia-magkachi-saboy-biography.html"
+    ]
+  }
+}

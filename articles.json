@@ -72,7 +72,11 @@
     "title": "A Brown Man's Burden",
     "category": "papers",
     "review_status": "reviewed",
-    "tags": []
+    "tags": [],
+    "categories": [
+      "papers"
+    ],
+    "original_publication_date": "2014-09-01"
   },
   {
     "file": "a-prodigal-indigene-locating-myself-in-colonialism.html",

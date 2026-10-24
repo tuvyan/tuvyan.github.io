@@ -318,7 +318,11 @@
     "tags": [],
     "wordpress_archive_date": "2020-09-08",
     "wordpress_date_source": "WordPress export 2022-07-26",
-    "date_note": "WordPress archive timestamp; not necessarily first publication"
+    "date_note": "WordPress archive timestamp; not necessarily first publication",
+    "categories": [
+      "blog"
+    ],
+    "original_publication_date": "2020-09-08"
   },
   {
     "file": "doland-trump-and-his-sacred-text-the-vestas.html",

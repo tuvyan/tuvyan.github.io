@@ -479,7 +479,11 @@
     "tags": [],
     "wordpress_archive_date": "2020-07-19",
     "wordpress_date_source": "WordPress export 2022-07-26",
-    "date_note": "WordPress archive timestamp; not necessarily first publication"
+    "date_note": "WordPress archive timestamp; not necessarily first publication",
+    "categories": [
+      "blog"
+    ],
+    "original_publication_date": "2020-07-19"
   },
   {
     "file": "layad-nen-likhatan-cordilleras-most-popular-song.html",

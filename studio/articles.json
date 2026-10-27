@@ -242,7 +242,10 @@
     "title": "Conrado Ka Ambo Balweg, Vanaw Rebel Priest",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": []
+    "tags": [],
+    "categories": [
+      "heritage"
+    ]
   },
   {
     "file": "cordillera-indigenous-music-2-by-am-saboy.html",

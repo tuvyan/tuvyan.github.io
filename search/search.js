@@ -7,12 +7,22 @@ const dtype=x=>x.publication_date||x.original_publication_date||x.published_date
 const node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e};
 let rows=[],fullTextStatus='Full-text index loading';
 function snippet(text,terms){if(!text)return '';const lower=text.toLocaleLowerCase();let pos=0;for(const t of terms){const i=lower.indexOf(t);if(i>=0){pos=i;break}}const start=Math.max(0,pos-85),end=Math.min(text.length,pos+185);return (start?'…':'')+text.slice(start,end)+(end<text.length?'…':'')}
+function highlighted(container,content,terms){
+ const value=String(content||'');if(!terms.length){container.textContent=value;return}
+ const ordered=[...new Set(terms.filter(Boolean))].sort((a,b)=>b.length-a.length);
+ const low=value.toLocaleLowerCase();let i=0;
+ while(i<value.length){let at=-1,word='';for(const t of ordered){const k=low.indexOf(t,i);if(k!==-1&&(at===-1||k<at||(k===at&&t.length>word.length))){at=k;word=t}}
+ if(at<0){container.append(document.createTextNode(value.slice(i)));break}
+ if(at>i)container.append(document.createTextNode(value.slice(i,at)));
+ const m=node('mark',value.slice(at,at+word.length));container.append(m);i=at+word.length;
+ }
+}
 function render(){const term=q.value.trim().toLocaleLowerCase(),terms=term.split(/\s+/).filter(Boolean),group=cat.value;
  const hits=rows.map(x=>{const metadata=[x.title,x.category,x.file,x.description||'',...(Array.isArray(x.tags)?x.tags:[])].join(' ').toLocaleLowerCase();const body=(x.fulltext||'').toLocaleLowerCase();const matches=terms.every(t=>metadata.includes(t)||body.includes(t));const rank=terms.reduce((n,t)=>n+(String(x.title).toLocaleLowerCase().includes(t)?5:0)+(metadata.includes(t)?2:0)+(body.includes(t)?1:0),0);return {x,matches,rank}}).filter(o=>(group==='all'||o.x.category===group)&&o.matches);
  hits.sort((a,b)=>b.rank-a.rank||date(b.x).localeCompare(date(a.x))||String(a.x.title).localeCompare(String(b.x.title)));
  results.replaceChildren();status.textContent=hits.length+' matching '+(hits.length===1?'entry':'entries')+' of '+rows.length+' indexed pages · '+fullTextStatus;
  if(!hits.length){results.append(node('p','No matching entries. Try fewer words or choose All collections. PDF scans and pages added since this index was built are not yet searchable by their full text.','empty'));return}
- const frag=document.createDocumentFragment();for(const {x} of hits){const card=node('article',undefined,'item'),h=node('h2'),a=node('a',x.title||x.file);a.href='../'+x.file;h.append(a);card.append(h);card.append(node('div',names[x.category]||x.category||'Archive page','meta'));const d=date(x);if(d)card.append(node('div',dtype(x)+' date: '+d,'meta'));if(terms.length&&x.fulltext){const s=snippet(x.fulltext,terms);if(s)card.append(node('p',s,'excerpt'))}frag.append(card)}results.append(frag)}
+ const frag=document.createDocumentFragment();for(const {x} of hits){const card=node('article',undefined,'item'),h=node('h2'),a=node('a');highlighted(a,x.title||x.file,terms);a.href='../'+x.file;h.append(a);card.append(h);card.append(node('div',names[x.category]||x.category||'Archive page','meta'));const d=date(x);if(d)card.append(node('div',dtype(x)+' date: '+d,'meta'));if(terms.length&&x.fulltext){const s=snippet(x.fulltext,terms);if(s){const p=node('p',undefined,'excerpt');highlighted(p,s,terms);card.append(p)}}frag.append(card)}results.append(frag)}
 async function load(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()}
 async function init(){let primary=[],supplemental=[],full=[];try{const v=await load('../articles.json');if(Array.isArray(v))primary=v.filter(x=>x&&valid(x.file));}catch(_){}
  try{const v=await load('archive-index.json?v=39');if(Array.isArray(v))supplemental=v.filter(x=>x&&valid(x.file));}catch(_){}
@@ -20,4 +30,4 @@ async function init(){let primary=[],supplemental=[],full=[];try{const v=await l
  const map=new Map();for(const x of primary.concat(supplemental)){map.set(x.file,{...map.get(x.file),...x,title:String(x.title||x.file)})}for(const x of full){if(map.has(x.file)){map.get(x.file).fulltext=x.text}else{map.set(x.file,{file:x.file,title:x.title,fulltext:x.text,category:'archive'})}}rows=[...map.values()];
  if(!rows.length){status.textContent='Could not load search catalogue.';results.append(node('p','Please try again later.','empty'));return}
  const groups=[...new Set(rows.map(x=>x.category).filter(Boolean))].sort();for(const k of groups){const o=node('option',names[k]||k);o.value=k;cat.append(o)}const params=new URLSearchParams(location.search);q.value=params.get('q')||'';const selected=params.get('category');if(selected&&groups.includes(selected))cat.value=selected;render()}
- q.addEventListener('input',render);cat.addEventListener('change',render);init();})();
+ function update(){render();const u=new URL(location.href);if(q.value.trim())u.searchParams.set('q',q.value.trim());else u.searchParams.delete('q');if(cat.value!=='all')u.searchParams.set('category',cat.value);else u.searchParams.delete('category');history.replaceState(null,'',u.pathname+u.search+u.hash)}q.addEventListener('input',update);cat.addEventListener('change',update);init();})();

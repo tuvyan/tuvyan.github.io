@@ -11,3 +11,7 @@
 .tuvyan-collections-feature {
   margin-bottom: 40px;
 }
+/* Keep category cards below Heritage Collections */
+.tuvyan-collections-feature + .features {
+  margin-top: 32px;
+}

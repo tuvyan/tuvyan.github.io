@@ -1,0 +1,5 @@
+/* TUVYAN Phase 37 search link: keep existing two-row navigation intact. */
+.advanced-search-link{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .75rem;border:1px solid currentColor;border-radius:.5rem;font-size:.94rem;white-space:normal;text-align:center;color:inherit;text-decoration:none}
+.advanced-search-link:hover{text-decoration:underline}
+.advanced-search-link:focus-visible{outline:3px solid #bd8c31;outline-offset:3px}
+@media(max-width:680px){.mast-actions{flex-wrap:wrap}.advanced-search-link{font-size:.9rem}}

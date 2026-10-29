@@ -7,3 +7,7 @@
 .tuvyan-collections-feature__links a:hover,.tuvyan-collections-feature__links a:focus-visible{background:#fff;outline:2px solid #1e6d5a;outline-offset:2px}
 @media(max-width:720px){.tuvyan-collections-feature{grid-template-columns:1fr;margin-inline:0}.tuvyan-collections-feature__links{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.tuvyan-collections-feature *{scroll-behavior:auto}}
+/* Phase 45: Separate Heritage Collections from category cards */
+.tuvyan-collections-feature {
+  margin-bottom: 40px;
+}

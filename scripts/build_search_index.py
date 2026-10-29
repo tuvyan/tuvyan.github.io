@@ -1,44 +1,58 @@
 #!/usr/bin/env python3
-"""Rebuild TUVYAN's static full-text index from published HTML pages."""
-import json
-import re
+"""Build TUVYAN's static, public catalogue full-text search index. Python standard library only."""
+import json, re, html, sys
 from pathlib import Path
-from bs4 import BeautifulSoup
+from html.parser import HTMLParser
 
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / 'search' / 'fulltext-index.json'
-EXCLUDED_DIRS = {'studio', 'search', 'assets', '.github', 'node_modules', '.git'}
-EXCLUDED_SELECTORS = (
-    'script,style,nav,footer,header,aside,form,svg,noscript,'
-    '[aria-hidden="true"],.related-reading,.article-navigation,.site-nav,.breadcrumbs'
-)
+ROOT=Path(__file__).resolve().parents[1]
+SKIP={'script','style','noscript','svg','nav','footer','aside','form','button'}
+class VisibleText(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True); self.parts=[]; self.stack=[]; self.main_depth=0; self.has_main=False
+    def handle_starttag(self, tag, attrs):
+        if tag in ('main','article') and not self.has_main:
+            self.has_main=True; self.main_depth=len(self.stack)+1
+        self.stack.append(tag)
+        if tag in ('p','div','h1','h2','h3','h4','li','section','blockquote','br'): self.parts.append(' ')
+    def handle_startendtag(self,tag,attrs):
+        if tag=='br': self.parts.append(' ')
+    def handle_endtag(self,tag):
+        if tag in ('p','div','h1','h2','h3','li'): self.parts.append(' ')
+        if tag in self.stack:
+            i=len(self.stack)-1-self.stack[::-1].index(tag)
+            self.stack=self.stack[:i]
+    def handle_data(self,data):
+        if not any(t in SKIP for t in self.stack):
+            if not self.has_main or len(self.stack)>=self.main_depth: self.parts.append(data)
 
+def safe_file(value):
+    return isinstance(value,str) and bool(re.fullmatch(r'[A-Za-z0-9_./%\-]+\.html',value)) and not value.startswith('/') and '..' not in value.split('/')
 
 def build():
-    records = []
-    for path in sorted(ROOT.rglob('*.html')):
-        rel = path.relative_to(ROOT)
-        if any(part in EXCLUDED_DIRS or part.startswith('.') for part in rel.parts[:-1]):
-            continue
-        if path.stat().st_size > 2_000_000:
-            print(f'Skipping oversized page: {rel}')
-            continue
-        soup = BeautifulSoup(path.read_text(encoding='utf-8', errors='replace'), 'html.parser')
-        title = soup.title.get_text(' ', strip=True) if soup.title else str(rel)
-        title = re.sub(r'\s*[|–—]\s*TUVYAN.*$', '', title, flags=re.I)[:180]
-        for element in soup.select(EXCLUDED_SELECTORS):
-            element.decompose()
-        content_root = soup.find('article') or soup.find('main') or soup.body or soup
-        content = re.sub(r'\s+', ' ', ' '.join(content_root.stripped_strings)).strip()
-        if len(content) < 90:
-            continue
-        records.append({'file': rel.as_posix(), 'title': title, 'text': content[:24000]})
-    if len(records) < 10:
-        raise RuntimeError(f'Only {len(records)} HTML pages indexed; refusing to replace index')
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(records, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
-    print(f'Indexed {len(records)} HTML pages in {OUTPUT.relative_to(ROOT)}')
-
-
-if __name__ == '__main__':
-    build()
+    catalog=json.loads((ROOT/'articles.json').read_text(encoding='utf-8'))
+    if not isinstance(catalog,list): raise ValueError('articles.json must be an array')
+    records=[]; missing=[]; seen=set()
+    for item in catalog:
+        if not isinstance(item,dict): continue
+        f=item.get('file'); title=item.get('title')
+        if not safe_file(f) or not isinstance(title,str) or not title.strip() or f in seen: continue
+        seen.add(f)
+        page=ROOT/f
+        if not page.is_file(): missing.append(f)
+        content=''
+        if page.is_file():
+            parser=VisibleText()
+            try:
+                parser.feed(page.read_text(encoding='utf-8',errors='replace'))
+                content=re.sub(r'\s+',' ',' '.join(parser.parts)).strip()[:125000]
+            except Exception as exc: print(f'Warning: {f}: {exc}',file=sys.stderr)
+        record={k:item.get(k,'') for k in ('title','file','category','author','summary','original_date','publication_date','upload_date','wordpress_date','wordpress_archive_date')}
+        record['tags']=item.get('tags',[]) if isinstance(item.get('tags',[]),list) else []
+        record['content']=content
+        records.append(record)
+    out=ROOT/'tuvyan-search-index.json'
+    out.write_text(json.dumps(records,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+    print(f'Indexed {len(records)} catalogue records; {sum(bool(x["content"]) for x in records)} have searchable page text; {len(missing)} missing HTML pages.')
+    if missing: print('Missing: '+', '.join(missing[:20]),file=sys.stderr)
+    return 0
+if __name__=='__main__': sys.exit(build())

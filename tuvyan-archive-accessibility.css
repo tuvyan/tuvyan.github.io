@@ -1,34 +1,30 @@
-/* TUVYAN Phase 35: restrained accessibility layer for independent archive pages. */
+/* TUVYAN Phase 35: additive accessibility for independent archive pages. */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:1rem;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{scroll-padding-top:1.5rem;-webkit-text-size-adjust:100%}
 body{overflow-wrap:break-word}
-main,article,section,header,footer{min-width:0}
-main{width:100%;max-width:100%}
-img,video,canvas,svg{max-width:100%;height:auto}
-iframe,embed,object{max-width:100%}
+main,article,section,figure,header,footer{min-width:0}
+img,svg,video,canvas,iframe,embed,object{max-width:100%}
+img{height:auto}
 figure{max-width:100%}
-figcaption{overflow-wrap:anywhere}
-pre,code{overflow-wrap:anywhere}pre{white-space:pre-wrap}
-a{overflow-wrap:anywhere;text-underline-offset:.14em}
-:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid #bb8635!important;outline-offset:3px!important}
-:where(button,input,select,textarea){font:inherit;max-width:100%}
-:where(header nav,.tuvyan-article-nav){flex-wrap:wrap;row-gap:.65rem}
-:where(.cards,.gallery,.grid){min-width:0}
-:where(.cards,.gallery,.grid)>*{min-width:0}
-:where(table){border-collapse:collapse}
+pre,code{overflow-wrap:anywhere}pre{overflow-x:auto}
+table{max-width:100%;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+a{overflow-wrap:anywhere;text-underline-offset:.16em}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #c18e31!important;outline-offset:3px}
+header nav,header .nav,.tuvyan-article-nav{flex-wrap:wrap;max-width:100%;row-gap:.6rem}
+header a{display:inline-block;line-height:1.4}
+main p,article p,main li{line-height:1.7}
 @media(max-width:700px){
- body{font-size:clamp(16px,4.1vw,18px);line-height:1.7}
- main{margin-top:0!important;padding-left:clamp(14px,4vw,22px)!important;padding-right:clamp(14px,4vw,22px)!important}
- header{padding-left:clamp(14px,4vw,22px)!important;padding-right:clamp(14px,4vw,22px)!important}
- header nav{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 12px}
- header a{display:inline-block;margin:0 8px 7px 0;line-height:1.5}
- :where(.cards,.gallery,.grid){grid-template-columns:minmax(0,1fr)!important}
- :where(.card,.memorial-collection){max-width:100%;overflow-wrap:anywhere}
- :where(h1){font-size:clamp(1.85rem,8vw,2.8rem);line-height:1.18}
- :where(h2){font-size:clamp(1.4rem,5.8vw,2rem);line-height:1.3}
- figure{margin-left:0;margin-right:0}
- iframe{width:100%}
+ header{padding:16px!important}
+ header nav{display:flex;flex-wrap:wrap;gap:7px 15px}
+ header a{margin-right:0!important;padding:5px 0;font-size:clamp(14px,3.7vw,17px)}
+ main{width:100%;max-width:100%;margin:0 auto!important;padding:24px 16px 48px!important}
+ h1{font-size:clamp(1.9rem,7.6vw,2.75rem)!important;line-height:1.16}
+ h2{font-size:clamp(1.4rem,5.5vw,2rem);line-height:1.3}
+ .gallery,.cards,.grid,.topic-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))!important}
+ .gallery figure{min-width:0}
+ .gallery img{max-width:100%;object-fit:contain}
+ .tuvyan-article-nav{gap:8px}
 }
-@media(max-width:420px){header a{font-size:clamp(13px,3.6vw,16px)}main{padding-bottom:48px!important}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-@media print{header nav,.tuvyan-article-nav{display:none!important}body{background:#fff!important;color:#111!important}main{max-width:none!important}a{color:#111!important}}
+@media(max-width:380px){.gallery,.cards,.grid,.topic-grid{grid-template-columns:minmax(0,1fr)!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media print{header nav,button{display:none!important}body{background:white!important;color:black!important}main{max-width:none!important}a{text-decoration:underline}}

@@ -5,6 +5,11 @@ from pathlib import Path
 from html.parser import HTMLParser
 
 ROOT=Path(__file__).resolve().parents[1]
+# Explicit public collections; never index editor, checkout or administrative pages.
+EXTRA_FOLDERS={'music-archive':'music','family-archive':'family'}
+EXTRA_ROOT={'gus-saboy-memorial.html':'memorial','gus-response-to-eulogies.html':'memorial','banao-conservation-history.html':'heritage','more-documents-about-banao.html':'heritage','banao-protected-landscape-act-2022.html':'heritage'}
+EXTRA_PREFIXES={'music-archive/':'music','family-archive/':'family'}
+
 SKIP={'script','style','noscript','svg','nav','footer','aside','form','button'}
 class VisibleText(HTMLParser):
     def __init__(self):
@@ -50,6 +55,31 @@ def build():
         record['tags']=item.get('tags',[]) if isinstance(item.get('tags',[]),list) else []
         record['content']=content
         records.append(record)
+    # Add public standalone archival pages only when they are not already catalogued.
+    extra=[]
+    for folder,category in EXTRA_FOLDERS.items():
+        base=ROOT/folder
+        if base.is_dir():
+            extra.extend((p,category) for p in sorted(base.glob('*.html')))
+    extra.extend((ROOT/f,category) for f,category in EXTRA_ROOT.items() if (ROOT/f).is_file())
+    for page,category in extra:
+        f=page.relative_to(ROOT).as_posix()
+        if f in seen or not safe_file(f): continue
+        seen.add(f)
+        source=page.read_text(encoding='utf-8',errors='replace')
+        title_match=re.search(r'<title[^>]*>(.*?)</title\s*>',source,re.I|re.S)
+        h1_match=re.search(r'<h1[^>]*>(.*?)</h1\s*>',source,re.I|re.S)
+        raw_title=title_match.group(1) if title_match else (h1_match.group(1) if h1_match else page.stem.replace('-',' ').title())
+        title=html.unescape(re.sub(r'<[^>]+>','',raw_title)).strip()
+        parser=VisibleText()
+        try: parser.feed(source)
+        except Exception as exc: print(f'Warning: {f}: {exc}',file=sys.stderr)
+        content=re.sub(r'\s+',' ',' '.join(parser.parts)).strip()[:125000]
+        # Do not infer a publication date or author from a filename or upload timestamp.
+        records.append({'file':f,'title':title,'category':category,'author':'','summary':'',
+                        'original_date':'','publication_date':'','upload_date':'',
+                        'wordpress_date':'','wordpress_archive_date':'','tags':[],
+                        'content':content})
     out=ROOT/'tuvyan-search-index.json'
     out.write_text(json.dumps(records,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
     print(f'Indexed {len(records)} catalogue records; {sum(bool(x["content"]) for x in records)} have searchable page text; {len(missing)} missing HTML pages.')

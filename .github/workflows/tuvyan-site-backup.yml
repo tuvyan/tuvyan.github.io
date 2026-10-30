@@ -1,0 +1,41 @@
+name: TUVYAN weekly full-site backup
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 2 * * 0'
+permissions:
+  contents: write
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the entire repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Create dated archive and checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p backup-output
+          stamp="$(date -u +%Y%m%d-%H%M%S)"
+          echo "STAMP=$stamp" >> "$GITHUB_ENV"
+          git archive --format=zip --output="backup-output/TUVYAN-site-$stamp.zip" HEAD
+          python3 scripts/verify_site_backup.py "backup-output/TUVYAN-site-$stamp.zip" --manifest "backup-output/TUVYAN-site-$stamp.manifest.csv"
+          (cd backup-output && sha256sum "TUVYAN-site-$stamp.zip" > "TUVYAN-site-$stamp.zip.sha256")
+          printf 'Source commit: %s\nCreated (UTC): %s\nIncludes: all files tracked in Git at this commit\nExcludes: Git commit history, uncommitted files, third-party hosted content, external comments, external services\n' "$(git rev-parse HEAD)" "$stamp" > "backup-output/README-$stamp.txt"
+      - name: Upload temporary workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tuvyan-backup-${{ env.STAMP }}
+          path: backup-output/
+          retention-days: 30
+      - name: Save durable dated GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="backup-${STAMP}"
+          gh release create "$tag" backup-output/* --title "TUVYAN site backup ${STAMP} UTC" --notes "Automated snapshot of tracked website files at commit $(git rev-parse HEAD). Download the ZIP and checksum to a separate local or cloud location. Git history and external service data are not included." --target "$GITHUB_SHA"

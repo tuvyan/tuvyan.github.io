@@ -952,5 +952,19 @@
     "wordpress_archive_date": "2020-06-10",
     "wordpress_date_source": "WordPress export 2022-07-26",
     "date_note": "WordPress archive timestamp; not necessarily first publication"
+  },
+  {
+    "file": "aida-amoga-manjajawak.html",
+    "title": "Aida Amoga: Manjajawak (Shaman)",
+    "category": "heritage",
+    "categories": [
+      "heritage"
+    ],
+    "description": "A portrait of Aida Amoga, a manjajawak and Indigenous knowledge bearer of Balbalan, Kalinga.",
+    "tags": [
+      "Vanaw Heritage",
+      "Indigenous Knowledge",
+      "Manjajawak"
+    ]
   }
 ]

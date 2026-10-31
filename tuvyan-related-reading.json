@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-31-phase8b",
+  "version": "2026-10-31-aida-two-articles",
   "method": "Existing title-similarity suggestions retained; new Aida Amoga connections are thematic suggestions based on catalogue titles, not verified editorial or historical relationships.",
   "links": {
     "the-handsomest-drowned-man-in-the-world-and-myth-making.html": [
@@ -165,6 +165,7 @@
       "music-archive/anatalia-magkachi-saboy-biography.html"
     ],
     "aida-amoga-manjajawak.html": [
+      "a-days-journey-with-a-manjajawak.html",
       "matatagun-anitu-living-anito.html",
       "monroe-taclawan-vanaw-chanter.html",
       "the-living-anitos-refashioning-tradition-performing-ethnicity.html"
@@ -177,6 +178,11 @@
     ],
     "the-living-anitos-refashioning-tradition-performing-ethnicity.html": [
       "aida-amoga-manjajawak.html"
+    ],
+    "a-days-journey-with-a-manjajawak.html": [
+      "aida-amoga-manjajawak.html",
+      "matatagun-anitu-living-anito.html",
+      "monroe-taclawan-vanaw-chanter.html"
     ]
   }
 }

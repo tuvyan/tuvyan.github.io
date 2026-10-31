@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-24-phase11",
-  "method": "shared distinctive title words (2+), plus manually confirmed pairs",
+  "version": "2026-10-31-phase8b",
+  "method": "Existing title-similarity suggestions retained; new Aida Amoga connections are thematic suggestions based on catalogue titles, not verified editorial or historical relationships.",
   "links": {
     "the-handsomest-drowned-man-in-the-world-and-myth-making.html": [
       "the-handsomest-drowned-man-in-the-world-and-myth-making-2.html"
@@ -163,6 +163,20 @@
       "gus-response-to-eulogies.html",
       "tabuk-citihood-augustus-ulat-saboy.html",
       "music-archive/anatalia-magkachi-saboy-biography.html"
+    ],
+    "aida-amoga-manjajawak.html": [
+      "matatagun-anitu-living-anito.html",
+      "monroe-taclawan-vanaw-chanter.html",
+      "the-living-anitos-refashioning-tradition-performing-ethnicity.html"
+    ],
+    "matatagun-anitu-living-anito.html": [
+      "aida-amoga-manjajawak.html"
+    ],
+    "monroe-taclawan-vanaw-chanter.html": [
+      "aida-amoga-manjajawak.html"
+    ],
+    "the-living-anitos-refashioning-tradition-performing-ethnicity.html": [
+      "aida-amoga-manjajawak.html"
     ]
   }
 }

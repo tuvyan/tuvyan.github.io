@@ -178,9 +178,9 @@ function checkPublicationHTML(html){
  const parsed=new DOMParser().parseFromString(html,'text/html');
  const css=[...parsed.querySelectorAll('link[rel="stylesheet"]')].some(el=>/tuvyan-reading-links\.css(?:[?#]|$)/.test(el.getAttribute('href')||''));
  const js=[...parsed.querySelectorAll('script[src]')].some(el=>/tuvyan-reading-links\.js(?:[?#]|$)/.test(el.getAttribute('src')||''));
- const hasArticle=!!parsed.querySelector('article');
+ const hasArticle=!!parsed.querySelector('article') || !!parsed.querySelector('main') || !!parsed.querySelector('[role=main]');
  const problems=[];
- if(!hasArticle)problems.push('Article element missing');
+ if(!hasArticle)problems.push('Article content container missing');
  if(!css)problems.push('Related-reading stylesheet missing');
  if(!js)problems.push('Related-reading script missing');
  $('publicationCheck').textContent=problems.length?'Publication check: '+problems.join('; '):'Publication check passed: article and related-reading assets included.';
@@ -189,7 +189,12 @@ function checkPublicationHTML(html){
 $('previewArticle').onclick=()=>{
  const html=buildHTML();if(!html)return;
  if(!checkPublicationHTML(html))return;
- const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+ const previewDoc=new DOMParser().parseFromString(html,'text/html');
+ const base=previewDoc.createElement('base');
+ base.href=new URL('../'+filename,location.href).href;
+ previewDoc.head.prepend(base);
+ const previewHTML='<!doctype html>\n'+previewDoc.documentElement.outerHTML;
+ const blob=new Blob([previewHTML],{type:'text/html;charset=utf-8'});
  const url=URL.createObjectURL(blob);
  const win=window.open(url,'_blank','noopener');
  if(!win){$('status').textContent='Pop-up blocked. Allow pop-ups to preview, or use Download backup HTML.';}

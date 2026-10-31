@@ -1,0 +1,267 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Visual Editor | TUVYAN Studio</title><style>*{box-sizing:border-box}body{margin:0;background:#f9f7f0;color:#183b30;font:17px/1.5 system-ui,sans-serif}header{background:#103c2e;color:white;padding:20px max(18px,calc((100% - 1100px)/2))}header a{color:#eacb8c}main{max-width:1100px;margin:30px auto;padding:0 18px}.panel{background:white;border:1px solid #d9ded8;border-radius:12px;padding:22px;margin:16px 0}label{display:block;font-weight:700;margin-top:12px}input,textarea{width:100%;padding:12px;border:1px solid #9eafa7;border-radius:7px;font:inherit}button,.button{border:0;border-radius:7px;background:#14553f;color:white;padding:12px 17px;cursor:pointer;font:inherit;display:inline-block;text-decoration:none;margin:7px 7px 7px 0}.muted{color:#51695e}#content{min-height:350px;padding:25px;border:1px solid #9eafa7;border-radius:8px;background:#fff;font:19px/1.7 Georgia,serif;overflow-wrap:anywhere}#content:focus{outline:2px solid #bd8d30}#content img{max-width:100%}.toolbar button{padding:8px 12px}#dateEvidence{background:#f5f2e9;border-left:4px solid #b58a38;padding:12px;margin-top:12px}#content img{height:auto}#content figure{max-width:100%}#status{font-weight:700}code{background:#eee;padding:2px 5px}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:5px}.toolbar button{margin:3px;padding:8px 11px}.inline-tool{display:inline-flex;align-items:center;gap:6px;margin:4px 8px;font-weight:600;font-size:14px}.inline-tool input[type=color]{width:46px;height:34px;padding:2px}.inline-tool select{width:auto;padding:6px;font-size:14px}.photo-tools{border:1px solid #b5c7bb;border-radius:8px;background:#f2f7f2;padding:12px;margin:10px 0}.photo-tools[hidden]{display:none}.photo-tools button{font-size:14px;padding:7px 10px;margin:3px}#content img{cursor:pointer}#content img.selected-photo{outline:3px solid #b88c26;outline-offset:3px}#content figcaption{min-height:1em;cursor:text}#content figure{max-width:100%}#cropDialog[hidden]{display:none}#cropDialog{position:fixed;inset:0;background:rgba(0,0,0,.68);z-index:9999;display:grid;place-items:center;padding:12px;overflow:auto}.crop-box{width:min(720px,100%);max-height:95vh;overflow:auto;background:white;color:#183b30;border-radius:12px;padding:20px}.crop-preview{width:100%;max-width:520px;margin:12px auto;aspect-ratio:4/3;overflow:hidden;background:#e8e8e8;position:relative}.crop-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}.crop-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.crop-fields label{margin:0}.crop-fields select,.crop-fields input{width:100%}.crop-actions{display:flex;flex-wrap:wrap;gap:8px}.crop-actions button{margin:0}@media(max-width:580px){.crop-fields{grid-template-columns:1fr}}
+.tuvyan-selection{position:absolute;border:2px solid #16b6ef;box-shadow:0 0 0 9999px rgba(0,0,0,.35);cursor:move;touch-action:none;z-index:5}
+.tuvyan-selection i{position:absolute;display:block;width:13px;height:13px;background:white;border:2px solid #007ab5;border-radius:2px;transform:translate(-50%,-50%);touch-action:none}
+.tuvyan-selection i[data-handle=nw]{left:0;top:0;cursor:nwse-resize}
+.tuvyan-selection i[data-handle=n]{left:50%;top:0;cursor:ns-resize}
+.tuvyan-selection i[data-handle=ne]{left:100%;top:0;cursor:nesw-resize}
+.tuvyan-selection i[data-handle=e]{left:100%;top:50%;cursor:ew-resize}
+.tuvyan-selection i[data-handle=se]{left:100%;top:100%;cursor:nwse-resize}
+.tuvyan-selection i[data-handle=s]{left:50%;top:100%;cursor:ns-resize}
+.tuvyan-selection i[data-handle=sw]{left:0;top:100%;cursor:nesw-resize}
+.tuvyan-selection i[data-handle=w]{left:0;top:50%;cursor:ew-resize}
+.crop-preview{position:relative;overflow:hidden}
+
+/* TUVYAN editor enhancements: scoped to editable article and published content. */
+#content table{border-collapse:collapse;width:100%;margin:1em 0;display:table}
+#content th,#content td{border:1px solid #8fa99b;padding:8px 10px;min-width:40px;vertical-align:top}
+#content th{background:#edf3ee}
+#content img.tuvyan-wrap-left,#content figure.tuvyan-wrap-left,#content .tuvyan-crop-frame.tuvyan-wrap-left{float:left;clear:left;margin:0.35em 1.2em 0.7em 0!important;max-width:48%}
+#content img.tuvyan-wrap-right,#content figure.tuvyan-wrap-right,#content .tuvyan-crop-frame.tuvyan-wrap-right{float:right;clear:right;margin:0.35em 0 0.7em 1.2em!important;max-width:48%}
+#content .tuvyan-clear{clear:both}
+@media(max-width:600px){#content img.tuvyan-wrap-left,#content img.tuvyan-wrap-right,#content figure.tuvyan-wrap-left,#content figure.tuvyan-wrap-right,#content .tuvyan-crop-frame.tuvyan-wrap-left,#content .tuvyan-crop-frame.tuvyan-wrap-right{float:none;display:block;width:100%!important;max-width:100%;margin:1em auto!important}}
+</style></head><body><header><a href="./">← TUVYAN Studio</a><h1>Visual Article Editor</h1><p>Edit articles and publish directly to GitHub Pages.</p></header><main><div class="panel"><p><strong>Important:</strong> Publishing uses a GitHub fine-grained personal access token with <strong>Contents: Read and write</strong> permission for this repository only. Your token stays in this browser tab and is not saved by the editor. The Studio page itself is public; never share your token or enter it on an untrusted site.</p><button id="newArticle" type="button">+ Create new article</button> <a class="button" href="pages.html" style="display:inline-block;margin:8px 0">Edit heritage pages</a><label for="file">Article file</label><input id="file" readonly><p class="muted" id="newHelp">For new articles, choose a unique URL filename; the editor will create the HTML page and update both catalogues.</p><div id="newArticleOptions" hidden><label for="newSlug">New article filename (letters, numbers and hyphens)</label><input id="newSlug" placeholder="my-article-title"><p class="muted">The public address will be https://tuvyan.github.io/your-article-title.html. Choose the filename before adding media.</p></div><h2>Title &amp; Metadata</h2><p class="muted">These details update both the article page and the homepage catalogue when published. Existing archival evidence is preserved.</p><label for="title">Public article title</label><input id="title" placeholder="Article title"><label for="description">Short description (optional)</label><textarea id="description" rows="3" maxlength="320" placeholder="Brief summary for search and sharing"></textarea><fieldset id="categoryFields" style="border:1px solid #b5c7bb;border-radius:8px;padding:12px;margin-top:16px"><legend><strong>Article categories (select one or more)</strong></legend><p class="muted" style="margin:4px 0 8px">The first selected category is the primary category. Existing selections are preserved until you change them.</p><div id="categoryChoices" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px"></div></fieldset><label for="date">Original publication date (only if verified)</label><input id="date" type="date"><p class="muted">Leave the date blank if uncertain. An original publication date is different from the date you edited the webpage.</p><div id="dateEvidence" role="note">Archive evidence will appear here after the article loads. Do not treat an archive timestamp as a verified first-publication date.</div></div><div class="panel"><div class="toolbar"><button type="button" data-cmd="bold">Bold</button><button type="button" data-cmd="italic">Italic</button><button type="button" data-cmd="underline">Underline</button><button type="button" data-cmd="formatBlock" data-value="p">Paragraph</button><button type="button" data-cmd="formatBlock" data-value="h2">Heading 2</button><button type="button" data-cmd="formatBlock" data-value="h3">Heading 3</button><button type="button" data-cmd="insertUnorderedList">Bullet list</button><button type="button" data-cmd="insertOrderedList">Numbered list</button><button type="button" data-cmd="indent">Indent →</button><button type="button" data-cmd="outdent">← Outdent</button><button type="button" data-cmd="formatBlock" data-value="blockquote">❝ Block quote</button><label class="inline-tool" for="articleSymbol">Symbol / emoji <select id="articleSymbol"><option value="">Choose…</option><option>→</option><option>←</option><option>↔</option><option>•</option><option>✓</option><option>★</option><option>§</option><option>¶</option><option>“</option><option>”</option><option>‘</option><option>’</option><option>—</option><option>–</option><option>ə</option><option>ŋ</option><option>ɲ</option><option>ɡ</option><option>😊</option><option>🙏</option><option>❤️</option><option>📚</option><option>🌿</option></select></label><button type="button" id="link">Add link</button><label class="inline-tool" for="textColor">Text colour <input type="color" id="textColor" value="#23362b"></label><label class="inline-tool" for="fontSize">Text size <select id="fontSize"><option value="">Choose</option><option value="2">Small</option><option value="3">Normal</option><option value="4">Large</option><option value="5">Larger</option><option value="6">Heading size</option></select></label><button type="button" id="removeFormat">Clear text formatting</button><button type="button" id="alignLeft">Align left</button><button type="button" id="alignCenter">Center</button><button type="button" id="alignRight">Align right</button><button type="button" id="alignJustify">Justify</button><button type="button" id="undoEdit">Undo</button><button type="button" id="redoEdit">Redo</button><button type="button" id="insertTable">Insert table</button><button type="button" id="tableRowAdd">Add table row</button><button type="button" id="tableRowDelete">Delete table row</button><button type="button" id="tableColAdd">Add table column</button><button type="button" id="tableColDelete">Delete table column</button></div><div class="photo-tools" id="photoTools" hidden><strong>Selected photograph</strong> <button type="button" id="rotateLeft">Rotate left</button><button type="button" id="rotateRight">Rotate right</button><button type="button" id="rotateReset">Reset rotation</button><button type="button" id="cropOpen">Crop / Reframe…</button><label class="inline-tool">Width <select id="photoWidth"><option value="100%">Full width</option><option value="75%">75%</option><option value="50%">50%</option><option value="33%">33%</option></select></label><label class="inline-tool">Align <select id="photoAlign"><option value="center">Centre</option><option value="left">Left</option><option value="right">Right</option></select></label><label class="inline-tool" for="photoWrap">Text wrapping <select id="photoWrap"><option value="none">No wrapping</option><option value="left">Photo left / text right</option><option value="right">Photo right / text left</option></select></label><label class="inline-tool" for="photoFit">Display <select id="photoFit"><option value="contain">Fit entire photo</option><option value="cover">Fill frame (crop)</option></select></label><span class="muted">Only the webpage display changes. The original photograph file stays intact.</span></div><div id="cropDialog" class="crop-dialog" hidden role="dialog" aria-modal="true" aria-labelledby="cropTitle"><div class="crop-box"><h2 id="cropTitle">Crop photograph (original preserved)</h2><p class="muted">Change the visible framing only. The source photograph is never edited or replaced.</p><div class="crop-preview" id="cropPreview"><img id="cropPreviewImage" alt="Crop preview"><div id="cropSelection" class="tuvyan-selection"><i data-handle="nw"></i><i data-handle="n"></i><i data-handle="ne"></i><i data-handle="e"></i><i data-handle="se"></i><i data-handle="s"></i><i data-handle="sw"></i><i data-handle="w"></i></div></div><div class="crop-fields"><label for="cropRatio">Frame shape<select id="cropRatio"><option value="original">Original image</option><option value="1/1">Square · 1:1</option><option value="4/5">Portrait · 4:5</option><option value="3/4">Portrait · 3:4</option><option value="16/9">Landscape · 16:9</option><option value="4/3">Landscape · 4:3</option></select></label><label for="cropZoom">Zoom <output id="cropZoomValue">100%</output><input type="range" id="cropZoom" min="100" max="300" value="100" step="5"></label><label for="cropX">Horizontal position <output id="cropXValue">50%</output><input type="range" id="cropX" min="0" max="100" value="50"></label><label for="cropY">Vertical position <output id="cropYValue">50%</output><input type="range" id="cropY" min="0" max="100" value="50"></label></div><p class="muted">Drag the blue crop rectangle, its corners, or its edges to choose the visible area. The sliders remain available for legacy framing. Rotation remains separate.</p><div class="crop-actions"><button type="button" id="cropApply">Apply crop</button><button type="button" id="cropReset">Remove crop</button><button type="button" id="cropCancel">Cancel</button></div></div></div><div class="media-upload-tools" style="border:1px solid #d5dfd6;border-radius:10px;padding:14px;margin:12px 0"><strong>External media</strong> <button type="button" id="embedVideo">Embed YouTube / Vimeo video</button><button type="button" id="embedDocument">Attach document by HTTPS URL</button><p class="muted">External videos use a privacy-conscious iframe. Documents appear as accessible links. Uploaded media remains available through Choose photos, documents, audio or video above.</p></div><div class="media-upload-tools" style="border:1px solid #d5dfd6;border-radius:10px;padding:14px;margin:14px 0;background:#f5f8f5"><strong>Insert / Upload</strong> <button type="button" id="insertMedia">Choose photos, documents, audio or video…</button><input id="mediaFiles" type="file" accept="image/*,.pdf,.doc,.docx,.odt,.txt,.rtf,audio/*,video/*" multiple hidden><p class="muted">Place the cursor in the article first, then choose files. Files are uploaded to the public GitHub repository when you publish. Maximum 20 MB per file; use external hosting for larger videos. Check permissions and privacy before publishing.</p><p class="muted" id="mediaQueueStatus" aria-live="polite"></p></div><label for="content">Article content</label><div id="content" contenteditable="true" role="textbox" aria-multiline="true"></div><p class="muted">Click a photograph to adjust its display. Click directly in a caption to edit it. Images are previewed from their actual article folders. Existing image filenames and paths are preserved when publishing. Always download a backup before major edits.</p><p id="status" role="status"></p><label for="token">GitHub access token (only needed when publishing)</label><input id="token" type="password" autocomplete="off" placeholder="github_pat_…"><p class="muted">For safety, use a fine-grained token restricted to tuvyan.github.io with Contents: Read and write. The token is held only in this tab; close the tab to discard it. Never commit it to your repository.</p><button id="publish" type="button">Publish changes directly</button><button id="download" type="button">Download backup HTML</button><a id="github" class="button" target="_blank" rel="noopener">Open GitHub upload</a></div></main><script>let catalogueRows=null,catalogueItem=null, catalogueLoaded=false;let source='',doc,filename='',target,heading;const $=id=>document.getElementById(id);const CATEGORY_LABELS={blog:'Blog & Essays',papers:'Papers & Research',heritage:'Vanaw Heritage',language:'Orthography & Dictionary',gus:'Gus Saboy'};
+function renderCategories(item){const wrap=$('categoryChoices');wrap.replaceChildren();const chosen=Array.isArray(item?.categories)&&item.categories.length?item.categories:(item?.category?[item.category]:[]);const keys=[...new Set([...Object.keys(CATEGORY_LABELS),...chosen])];keys.forEach(key=>{const label=document.createElement('label');label.style.cssText='display:flex;align-items:center;gap:8px;margin:0;font-weight:500';const check=document.createElement('input');check.type='checkbox';check.value=key;check.checked=chosen.includes(key);check.style.cssText='width:auto;margin:0';label.append(check,document.createTextNode(CATEGORY_LABELS[key]||key));wrap.append(label)});}
+function selectedCategories(){return [...$('categoryChoices').querySelectorAll('input:checked')].map(x=>x.value)}
+const params=new URLSearchParams(location.search);filename=params.get('file')||'';const newMode=params.get('new')==='1';if(newMode)filename='new-article.html';if(!/^(?:[a-z0-9][a-z0-9._-]*\/)*[a-z0-9][a-z0-9._-]*\.html$/i.test(filename)||filename.includes('..')){$('status').textContent='Invalid filename. Return to Studio and choose an article.'}else{ $('file').value=filename;$('github').href='https://github.com/tuvyan/tuvyan.github.io/upload/main';(newMode?Promise.resolve('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>New article | TUVYAN</title><link rel="stylesheet" href="/tuvyan.css"></head><body><header><a href="/">TUVYAN</a></header><main><article><h1>New article</h1><p>Start writing here.</p></article></main></body></html>'):fetch('../'+filename.split('/').map(encodeURIComponent).join('/')+'?studio_load='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Article not found');return r.text()})).then(html=>{source=html;doc=new DOMParser().parseFromString(html,'text/html');heading=doc.querySelector('h1');target=doc.querySelector('main article, article, main .article-body, main, .content, .article, .body');if(!target){target=doc.body;}const title=doc.querySelector('title')?.textContent?.replace(/\s*\|\s*TUVYAN.*$/i,'')||heading?.textContent||filename.replace(/\.html$/,'').replace(/-/g,' ');$('title').value=title.trim();$('description').value=doc.querySelector('meta[name="description"]')?.getAttribute('content')||'';const date=doc.querySelector('meta[name="article:published_time"],meta[property="article:published_time"]')?.getAttribute('content')||doc.querySelector('time[datetime]')?.getAttribute('datetime')||'';if(/^\d{4}-\d\d-\d\d/.test(date))$('date').value=date.slice(0,10);$('content').innerHTML=target.innerHTML;
+// In Studio, relative image URLs otherwise resolve under /studio/ instead of the article folder.
+// Keep original values separately, and restore them before publishing.
+const articleUrl=new URL('../'+filename,location.href);
+$('content').querySelectorAll('img[src]').forEach(img=>{
+  const original=img.getAttribute('src');
+  img.dataset.tuvyanOriginalSrc=original;
+  img.setAttribute('src',new URL(original,articleUrl).href);
+});
+$('status').textContent='Loaded. You can edit text, photo captions, and photo display below.';fetch('../articles.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(rows=>{catalogueRows=Array.isArray(rows)?rows:null;catalogueLoaded=!!catalogueRows;const item=catalogueRows?.find(a=>a.file===filename);catalogueItem=item||null;renderCategories(item);if(item?.title)$('title').value=item.title;if(item?.description)$('description').value=item.description;if(item?.original_publication_date&&/^\d{4}-\d{2}-\d{2}$/.test(item.original_publication_date))$('date').value=item.original_publication_date;const e=$('dateEvidence');if(!item){e.textContent='No catalogue date evidence found for this page.';return;}const pieces=[];if(item.wordpress_archive_date)pieces.push('WordPress archive timestamp: '+item.wordpress_archive_date+' (not verified as first publication).');if(item.wordpress_date_source)pieces.push('Archive source: '+item.wordpress_date_source+'.');if(item.date_note)pieces.push(item.date_note);if(!pieces.length)pieces.push('No historical publication date recorded in the catalogue.');e.textContent=pieces.join(' ');}).catch(()=>{catalogueLoaded=false;$('dateEvidence').textContent='Catalogue unavailable. Publishing is disabled to avoid mismatched titles; try refreshing.'})}).catch(e=>$('status').textContent=e.message)}document.querySelectorAll('[data-cmd]').forEach(b=>b.addEventListener('click',()=>{ $('content').focus();document.execCommand(b.dataset.cmd,false,b.dataset.value||null)}));// Remember text selection when using controls that otherwise steal focus.
+let savedRange=null,selectedPhoto=null;
+const content=$('content');
+content.addEventListener('mouseup',()=>{const s=window.getSelection();if(s.rangeCount&&content.contains(s.anchorNode))savedRange=s.getRangeAt(0).cloneRange()});
+content.addEventListener('keyup',()=>{const s=window.getSelection();if(s.rangeCount&&content.contains(s.anchorNode))savedRange=s.getRangeAt(0).cloneRange()});
+function restoreSelection(){if(savedRange){const s=window.getSelection();s.removeAllRanges();s.addRange(savedRange)}content.focus()}
+$('textColor').addEventListener('input',e=>{restoreSelection();document.execCommand('foreColor',false,e.target.value)});
+$('fontSize').addEventListener('change',e=>{if(!e.target.value)return;restoreSelection();document.execCommand('fontSize',false,e.target.value);e.target.value=''});
+$('removeFormat').onclick=()=>{restoreSelection();document.execCommand('removeFormat')};
+$('articleSymbol').addEventListener('change',e=>{if(!e.target.value)return;restoreSelection();document.execCommand('insertText',false,e.target.value);e.target.value=''});
+content.addEventListener('click',e=>{const img=e.target.closest('img');content.querySelectorAll('.selected-photo').forEach(x=>x.classList.remove('selected-photo'));selectedPhoto=img&&content.contains(img)?img:null;$('photoTools').hidden=!selectedPhoto;if(selectedPhoto){selectedPhoto.classList.add('selected-photo');$('photoFit').value=selectedPhoto.style.objectFit||'contain'}});
+function rotatePhoto(delta,reset=false){if(!selectedPhoto)return;if(cropFrame(selectedPhoto)){ $('status').textContent='Remove the crop before rotating this photograph, then apply the crop again.';return;}const current=Number(selectedPhoto.dataset.tuvyanRotation||'0');const next=reset?0:(current+delta+360)%360;selectedPhoto.dataset.tuvyanRotation=String(next);selectedPhoto.style.transform=next?'rotate('+next+'deg)':'';selectedPhoto.style.transformOrigin='center center';}
+$('rotateLeft').onclick=()=>rotatePhoto(-90);$('rotateRight').onclick=()=>rotatePhoto(90);$('rotateReset').onclick=()=>rotatePhoto(0,true);
+$('photoFit').onchange=e=>{if(selectedPhoto)selectedPhoto.style.objectFit=e.target.value};
+// Non-destructive photo cropping. Inline styles persist on public GitHub Pages;
+// the original image src and bytes are never modified.
+const cropDialog=$('cropDialog'),cropPreview=$('cropPreview'),cropImage=$('cropPreviewImage');
+let cropPhoto=null;
+function cropFrame(img){return img?.parentElement?.classList.contains('tuvyan-crop-frame')?img.parentElement:null}
+function imageRatio(img){return img.naturalWidth&&img.naturalHeight?(img.naturalWidth+'/'+img.naturalHeight):'4/3'}
+function cropValues(){return {ratio:$('cropRatio').value,zoom:Number($('cropZoom').value),x:Number($('cropX').value),y:Number($('cropY').value)}}
+function setCropPreview(){const v=cropValues();cropPreview.style.aspectRatio=v.ratio==='original'?imageRatio(cropPhoto):v.ratio;cropImage.style.objectPosition=v.x+'% '+v.y+'%';cropImage.style.transform='scale('+(v.zoom/100)+')';cropImage.style.transformOrigin=v.x+'% '+v.y+'%';$('cropZoomValue').textContent=v.zoom+'%';$('cropXValue').textContent=v.x+'%';$('cropYValue').textContent=v.y+'%'}
+['cropRatio','cropZoom','cropX','cropY'].forEach(id=>$(id).addEventListener('input',setCropPreview));
+$('cropOpen').onclick=()=>{if(!selectedPhoto)return;cropPhoto=selectedPhoto;const frame=cropFrame(cropPhoto);$('cropRatio').value=frame?.dataset.tuvyanCropRatio||'original';$('cropZoom').value=frame?.dataset.tuvyanCropZoom||'100';$('cropX').value=frame?.dataset.tuvyanCropX||'50';$('cropY').value=frame?.dataset.tuvyanCropY||'50';cropImage.src=cropPhoto.src;cropDialog.hidden=false;setCropPreview()};
+function closeCrop(){cropDialog.hidden=true;cropPhoto=null}
+$('cropCancel').onclick=closeCrop;
+$('cropApply').onclick=()=>{if(!cropPhoto)return;const v=cropValues();let frame=cropFrame(cropPhoto);if(!frame){frame=document.createElement('div');frame.className='tuvyan-crop-frame';cropPhoto.parentNode.insertBefore(frame,cropPhoto);frame.appendChild(cropPhoto)}frame.dataset.tuvyanCropRatio=v.ratio;frame.dataset.tuvyanCropZoom=String(v.zoom);frame.dataset.tuvyanCropX=String(v.x);frame.dataset.tuvyanCropY=String(v.y);frame.style.cssText='position:relative;overflow:hidden;display:block;width:100%;max-width:100%;margin:0 auto;aspect-ratio:'+(v.ratio==='original'?imageRatio(cropPhoto):v.ratio)+';';cropPhoto.style.width='100%';cropPhoto.style.height='100%';cropPhoto.style.maxWidth='none';cropPhoto.style.objectFit='cover';cropPhoto.style.objectPosition=v.x+'% '+v.y+'%';cropPhoto.style.transformOrigin=v.x+'% '+v.y+'%';cropPhoto.style.transform='scale('+(v.zoom/100)+')';cropPhoto.style.display='block';closeCrop();$('status').textContent='Crop applied to webpage display. Publish to make it public; the original image file remains unchanged.'};
+$('cropReset').onclick=()=>{if(!cropPhoto)return;const frame=cropFrame(cropPhoto);if(frame){frame.replaceWith(cropPhoto);cropPhoto.style.width='';cropPhoto.style.height='';cropPhoto.style.maxWidth='';cropPhoto.style.objectFit='';cropPhoto.style.objectPosition='';cropPhoto.style.transformOrigin='';cropPhoto.style.transform='';cropPhoto.style.display=''}closeCrop();$('status').textContent='Crop removed from display. Publish to save the change.'};
+
+// Phase 6J: independent edge cropping. Coordinates are percentages of the image.
+const selection=$('cropSelection');
+let rect={l:5,t:5,r:95,b:95}, drag=null;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function drawRect(){selection.style.left=rect.l+'%';selection.style.top=rect.t+'%';selection.style.width=(rect.r-rect.l)+'%';selection.style.height=(rect.b-rect.t)+'%'}
+selection.addEventListener('pointerdown',e=>{
+ e.preventDefault();e.stopPropagation();
+ const bounds=cropPreview.getBoundingClientRect();
+ drag={handle:e.target.dataset.handle||'move',x:e.clientX,y:e.clientY,initial:{...rect},w:bounds.width,h:bounds.height};
+ selection.setPointerCapture(e.pointerId);
+});
+selection.addEventListener('pointermove',e=>{
+ if(!drag)return;
+ const dx=(e.clientX-drag.x)/drag.w*100,dy=(e.clientY-drag.y)/drag.h*100;
+ const o=drag.initial, h=drag.handle;
+ if(h==='move'){
+  const w=o.r-o.l,hh=o.b-o.t;
+  rect.l=clamp(o.l+dx,0,100-w);rect.r=rect.l+w;
+  rect.t=clamp(o.t+dy,0,100-hh);rect.b=rect.t+hh;
+ }else{
+  rect={...o};
+  if(h.includes('w'))rect.l=clamp(o.l+dx,0,o.r-5);
+  if(h.includes('e'))rect.r=clamp(o.r+dx,o.l+5,100);
+  if(h.includes('n'))rect.t=clamp(o.t+dy,0,o.b-5);
+  if(h.includes('s'))rect.b=clamp(o.b+dy,o.t+5,100);
+ }
+ drawRect();
+});
+selection.addEventListener('pointerup',()=>drag=null);
+selection.addEventListener('pointercancel',()=>drag=null);
+const legacyCropOpen=$('cropOpen').onclick;
+$('cropOpen').onclick=()=>{
+ legacyCropOpen();
+ const old=cropFrame(cropPhoto);
+ const raw=old?.dataset.tuvyanEdgeCrop;
+ if(raw){try{const a=JSON.parse(raw);if([a.l,a.t,a.r,a.b].every(Number.isFinite))rect=a}catch{}}
+ else rect={l:5,t:5,r:95,b:95};
+ drawRect();
+};
+const legacyCropApply=$('cropApply').onclick;
+$('cropApply').onclick=()=>{
+ if(!cropPhoto)return;
+ const img=cropPhoto;
+ legacyCropApply();
+ const frame=cropFrame(img);
+ if(frame){
+  frame.dataset.tuvyanEdgeCrop=JSON.stringify(rect);
+  // Image is not cut or resampled. Clip percentages hide the outer margins.
+  img.style.clipPath=`inset(${rect.t}% ${100-rect.r}% ${100-rect.b}% ${rect.l}%)`;
+  frame.style.aspectRatio='auto';
+  frame.style.height='auto';
+  img.style.height='auto';
+  img.style.objectFit='contain';
+  img.style.transform='none';
+ }
+ $('status').textContent='Edge crop saved as a reversible display mask. Original image untouched. Publish to make it public.';
+};
+const legacyCropReset=$('cropReset').onclick;
+$('cropReset').onclick=()=>{
+ const img=cropPhoto; if(img)img.style.clipPath='';
+ legacyCropReset();
+};
+function photoContainer(img){return cropFrame(img)||img.closest('figure')||img}
+$('photoWidth').onchange=e=>{if(!selectedPhoto)return;const el=photoContainer(selectedPhoto);el.style.width=e.target.value;el.style.maxWidth='100%'};
+$('photoAlign').onchange=e=>{if(!selectedPhoto)return;const el=photoContainer(selectedPhoto);el.style.marginLeft=e.target.value==='right'?'auto':e.target.value==='center'?'auto':'0';el.style.marginRight=e.target.value==='left'?'auto':e.target.value==='center'?'auto':'0'};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!cropDialog.hidden)closeCrop()});
+
+$('link').onclick=()=>{const url=prompt('Paste a full https:// URL');if(url&&/^https:\/\//i.test(url)){$('content').focus();document.execCommand('createLink',false,url)}};// Phase 6G: Insert media, with deferred GitHub uploads and no token persistence.
+const mediaQueue=new Map();
+let mediaSelection=null;
+$('content').addEventListener('mouseup',()=>{const s=window.getSelection();if(s&&s.rangeCount&&$('content').contains(s.anchorNode))mediaSelection=s.getRangeAt(0).cloneRange()});
+$('content').addEventListener('keyup',()=>{const s=window.getSelection();if(s&&s.rangeCount&&$('content').contains(s.anchorNode))mediaSelection=s.getRangeAt(0).cloneRange()});
+$('insertMedia').onclick=()=>$('mediaFiles').click();
+function mediaInsertionPoint(){const s=window.getSelection();if(mediaSelection&&$('content').contains(mediaSelection.commonAncestorContainer)){s.removeAllRanges();s.addRange(mediaSelection)}else{$('content').focus();s.selectAllChildren($('content'));s.collapseToEnd()}return s}
+function addMediaNode(node){const s=mediaInsertionPoint();const r=s.getRangeAt(0);r.collapse(false);r.insertNode(node);r.setStartAfter(node);r.collapse(true);s.removeAllRanges();s.addRange(r);mediaSelection=r.cloneRange()}
+function mediaQueueSummary(){const n=mediaQueue.size;$('mediaQueueStatus').textContent=n?n+' new file(s) ready. Publish changes to upload the files and update this article.':'No files pending.'}
+$('mediaFiles').onchange=()=>{for(const file of $('mediaFiles').files){if(file.size>20*1024*1024){alert(file.name+' exceeds 20 MB. Host large videos elsewhere and insert a link.');continue}
+const safe=file.name.normalize('NFKD').replace(/[^a-zA-Z0-9._-]+/g,'-').replace(/^\.+/,'').slice(-90)||'attachment';
+const id='tuvyan-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,9)+'-'+safe;
+const path='media/uploads/'+id;const url=URL.createObjectURL(file);mediaQueue.set(path,{file,url});
+let el;if(file.type.startsWith('image/')){el=document.createElement('figure');const img=document.createElement('img');img.src=url;img.alt=file.name;img.dataset.tuvyanPendingUpload=path;img.style.maxWidth='100%';img.style.height='auto';const cap=document.createElement('figcaption');cap.textContent='Caption — click to edit';el.append(img,cap)}
+else if(file.type.startsWith('video/')){el=document.createElement('video');el.controls=true;el.src=url;el.dataset.tuvyanPendingUpload=path;el.style.maxWidth='100%'}
+else if(file.type.startsWith('audio/')){el=document.createElement('audio');el.controls=true;el.src=url;el.dataset.tuvyanPendingUpload=path}
+else{el=document.createElement('p');const a=document.createElement('a');a.href=url;a.textContent='Open '+file.name;a.dataset.tuvyanPendingUpload=path;el.append(a)}
+addMediaNode(el);addMediaNode(document.createElement('p'));} $('mediaFiles').value='';mediaQueueSummary()};
+
+// External media embeds are deliberately restricted to trusted video hosts.
+function videoEmbedSource(raw){let u;try{u=new URL(raw)}catch{return null}if(u.protocol!=='https:')return null;const host=u.hostname.toLowerCase();let id='';if(host==='youtu.be')id=u.pathname.slice(1).split('/')[0];else if(['youtube.com','www.youtube.com','m.youtube.com','www.youtube-nocookie.com'].includes(host)){if(u.pathname==='/watch')id=u.searchParams.get('v')||'';else if(/^\/(embed|shorts)\//.test(u.pathname))id=u.pathname.split('/')[2]}if(/^[a-zA-Z0-9_-]{11}$/.test(id))return 'https://www.youtube-nocookie.com/embed/'+id;if(['vimeo.com','www.vimeo.com','player.vimeo.com'].includes(host)){const m=u.pathname.match(/(?:video\/)?(\d+)(?:\/|$)/);if(m)return 'https://player.vimeo.com/video/'+m[1]}return null}
+$('embedVideo').onclick=()=>{const url=prompt('Paste a public YouTube or Vimeo video link (https://):');if(!url)return;const src=videoEmbedSource(url.trim());if(!src)return alert('Only HTTPS YouTube and Vimeo video links are supported.');const frame=document.createElement('iframe');frame.src=src;frame.title=prompt('Video title for accessibility:','Embedded video')||'Embedded video';frame.loading='lazy';frame.referrerPolicy='strict-origin-when-cross-origin';frame.setAttribute('allow','accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share');frame.setAttribute('allowfullscreen','');frame.style.cssText='display:block;width:100%;max-width:800px;aspect-ratio:16/9;border:0;margin:16px auto';addMediaNode(frame);addMediaNode(document.createElement('p'))};
+$('embedDocument').onclick=()=>{const url=prompt('Paste a public HTTPS document link:');if(!url)return;let u;try{u=new URL(url)}catch{}if(!u||u.protocol!=='https:')return alert('Enter a valid HTTPS URL.');const a=document.createElement('a');a.href=u.href;a.textContent=prompt('Document link text:','View attached document')||'View attached document';a.target='_blank';a.rel='noopener noreferrer';const p=document.createElement('p');p.append(a);addMediaNode(p)};
+
+function articleRelativeMediaPath(path){const depth=filename.split('/').length-1;return '../'.repeat(depth)+path}
+function encodeFile64(bytes){let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(binary)}
+async function uploadQueuedMedia(headers){for(const [path,entry] of mediaQueue){$('status').textContent='Uploading '+entry.file.name+'…';const url='https://api.github.com/repos/tuvyan/tuvyan.github.io/contents/'+path.split('/').map(encodeURIComponent).join('/');const bytes=new Uint8Array(await entry.file.arrayBuffer());const resp=await fetch(url,{method:'PUT',headers,body:JSON.stringify({message:'Add TUVYAN article media '+entry.file.name,content:encodeFile64(bytes),branch:'main'})});if(!resp.ok)throw Error('Media upload failed ('+entry.file.name+'): '+resp.status+' '+(await resp.text()).slice(0,160))}}
+function buildHTML(){if(!doc||!target)return;const title=$('title').value.trim();if(!title){alert('Please enter a title');return}target.innerHTML=$('content').innerHTML;const enhancedStyleId='tuvyan-editor-layout-v2';if(!doc.getElementById(enhancedStyleId)){const st=doc.createElement('style');st.id=enhancedStyleId;st.textContent='figure.tuvyan-wrap-left,img.tuvyan-wrap-left,.tuvyan-crop-frame.tuvyan-wrap-left{float:left;clear:left;margin:.35em 1.2em .7em 0!important;max-width:48%}figure.tuvyan-wrap-right,img.tuvyan-wrap-right,.tuvyan-crop-frame.tuvyan-wrap-right{float:right;clear:right;margin:.35em 0 .7em 1.2em!important;max-width:48%}@media(max-width:600px){figure.tuvyan-wrap-left,figure.tuvyan-wrap-right,img.tuvyan-wrap-left,img.tuvyan-wrap-right,.tuvyan-crop-frame.tuvyan-wrap-left,.tuvyan-crop-frame.tuvyan-wrap-right{float:none!important;display:block;width:100%!important;max-width:100%!important;margin:1em auto!important}}';doc.head.append(st)}
+target.querySelectorAll('img.selected-photo').forEach(img=>img.classList.remove('selected-photo'));
+target.querySelectorAll('[data-tuvyan-pending-upload]').forEach(el=>{const path=el.getAttribute('data-tuvyan-pending-upload');const attr=el.tagName==='A'?'href':'src';el.setAttribute(attr,articleRelativeMediaPath(path));el.removeAttribute('data-tuvyan-pending-upload')});
+target.querySelectorAll('img[data-tuvyan-rotation]').forEach(img=>img.removeAttribute('data-tuvyan-rotation'));
+target.querySelectorAll('img[data-tuvyan-original-src]').forEach(img=>{
+  img.setAttribute('src',img.dataset.tuvyanOriginalSrc);
+  img.removeAttribute('data-tuvyan-original-src');
+});
+let h=target.querySelector('h1');if(h)h.textContent=title;else if(heading)heading.textContent=title;else {h=doc.createElement('h1');h.textContent=title;target.prepend(h)}if(doc.querySelector('title'))doc.querySelector('title').textContent=title+' | TUVYAN';else{const t=doc.createElement('title');t.textContent=title+' | TUVYAN';doc.head.append(t)}const description=$('description').value.trim();let descMeta=doc.querySelector('meta[name="description"]');if(description){if(!descMeta){descMeta=doc.createElement('meta');descMeta.setAttribute('name','description');doc.head.append(descMeta)}descMeta.setAttribute('content',description)}else if(descMeta)descMeta.remove();const date=$('date').value;if(date){let m=doc.querySelector('meta[property="article:published_time"]');if(!m){m=doc.createElement('meta');m.setAttribute('property','article:published_time');doc.head.append(m)}m.setAttribute('content',date)}return '<!doctype html>\n'+doc.documentElement.outerHTML;}
+$('download').onclick=()=>{const html=buildHTML();if(!html)return;const blob=new Blob([html],{type:'text/html;charset=utf-8'});const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);$('status').textContent='Backup downloaded.'};
+function encode64(text){const bytes=new TextEncoder().encode(text);let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(binary)}
+
+async function putGitHubFile(path,content,headers,message){
+ const url='https://api.github.com/repos/tuvyan/tuvyan.github.io/contents/'+path.split('/').map(encodeURIComponent).join('/');
+ const current=await fetch(url+'?ref=main',{headers,cache:'no-store'});
+ if(!current.ok)throw Error('Could not read '+path+': '+current.status);
+ const old=await current.json();
+ const response=await fetch(url,{method:'PUT',headers,body:JSON.stringify({message,content:encode64(content),sha:old.sha,branch:'main'})});
+ if(!response.ok)throw Error('Could not update '+path+': '+response.status+' '+(await response.text()).slice(0,200));
+}
+function updatedCatalogue(rows){
+ if(!Array.isArray(rows))throw Error('Invalid article catalogue');
+ const result=rows.map(item=>({...item}));const item=result.find(a=>a.file===filename);
+ if(!item)throw Error('Article is missing from catalogue. Nothing published.');
+ const chosen=selectedCategories();if(!chosen.length)throw Error('Choose at least one article category.');item.category=chosen[0];item.categories=chosen;item.title=$('title').value.trim();
+ const description=$('description').value.trim();
+ if(description)item.description=description;else delete item.description;
+ const date=$('date').value;
+ // Verified date is stored separately; WordPress archive timestamps remain unchanged.
+ if(date)item.original_publication_date=date;
+ else delete item.original_publication_date;
+ return JSON.stringify(result,null,2)+'\n';
+}
+
+$('newArticle').onclick=()=>{if(confirm('Start a new article? Unsaved changes on this page will be lost.'))location.href='editor.html?new=1'};
+if(newMode){renderCategories({categories:['blog']});$('newArticleOptions').hidden=false;$('file').value='(new article)';$('publish').textContent='Publish new article';$('title').value='';$('description').value='';$('date').value='';$('content').innerHTML='<p>Write your new article here.</p>';$('newSlug').addEventListener('input',()=>{const slug=$('newSlug').value.toLowerCase().trim().replace(/[^a-z0-9-]/g,'').replace(/-+/g,'-').replace(/^-|-$/g,'');filename=slug?slug+'.html':'new-article.html';$('file').value=filename;});}
+async function createGitHubFile(path,content,headers,message){
+ const url='https://api.github.com/repos/tuvyan/tuvyan.github.io/contents/'+path.split('/').map(encodeURIComponent).join('/');
+ const check=await fetch(url+'?ref=main',{headers,cache:'no-store'});
+ if(check.status!==404)throw Error(check.ok?'A page with that filename already exists. Choose another filename.':'Could not check new filename: '+check.status);
+ const response=await fetch(url,{method:'PUT',headers,body:JSON.stringify({message,content:encode64(content),branch:'main'})});
+ if(!response.ok)throw Error('Could not create '+path+': '+response.status+' '+(await response.text()).slice(0,200));
+}
+function newCatalogue(rows){
+ if(!Array.isArray(rows))throw Error('Invalid article catalogue');
+ if(rows.some(x=>x.file===filename))throw Error('Article filename already exists in catalogue');
+ const categories=selectedCategories();if(!categories.length)throw Error('Select at least one category');
+ const item={file:filename,title:$('title').value.trim(),category:categories[0],categories};
+ if($('description').value.trim())item.description=$('description').value.trim();
+ if($('date').value)item.original_publication_date=$('date').value;
+ return JSON.stringify([...rows,item],null,2)+'\n';
+}
+$('publish').onclick=async()=>{
+  $('status').textContent='Validating publication details…';
+ const token=$('token').value.trim();if(!token){$('status').textContent='Enter your GitHub token to publish.';return}
+ if(!catalogueLoaded||(!newMode&&!catalogueItem)){$('status').textContent='Article catalogue did not load. Refresh before publishing; no changes were sent.';return}
+ if(!selectedCategories().length){$('status').textContent='Select at least one category before publishing.';return}
+ if(newMode){const slug=$('newSlug').value.trim();if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)){ $('status').textContent='Enter a valid lowercase URL filename first.';return;}filename=slug+'.html';if(!$('title').value.trim()){ $('status').textContent='Enter an article title.';return;}}
+ const html=buildHTML();if(!html)return;
+ if(!confirm('Publish article AND update both article catalogues? This makes the title and description public.'))return;
+ const button=$('publish');button.disabled=true;
+ const headers={'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'};
+ try{
+  // Read the latest catalogue, avoiding overwriting other recent metadata edits.
+  $('status').textContent='Checking latest catalogue…';
+  const catResp=await fetch('../articles.json?metadata='+Date.now(),{cache:'no-store'});
+  if(!catResp.ok)throw Error('Catalogue could not be refreshed. No changes published.');
+  const cat=await catResp.json();
+  if(!Array.isArray(cat)||(!newMode&&!cat.some(x=>x.file===filename)))throw Error('Catalogue is missing this article. No changes published.');
+  const catalogueJSON=newMode?newCatalogue(cat):updatedCatalogue(cat);
+  await uploadQueuedMedia(headers);
+  $('status').textContent='Publishing article…';
+  if(newMode)await createGitHubFile(filename,html,headers,'Create '+filename+' via TUVYAN Studio');else await putGitHubFile(filename,html,headers,'Update '+filename+' via TUVYAN Studio');
+  $('status').textContent='Updating public article catalogue…';
+  await putGitHubFile('articles.json',catalogueJSON,headers,'Update article metadata for '+filename);
+  $('status').textContent='Updating Studio catalogue…';
+  await putGitHubFile('studio/articles.json',catalogueJSON,headers,'Sync Studio article metadata for '+filename);
+  mediaQueue.forEach(entry=>URL.revokeObjectURL(entry.url));mediaQueue.clear();mediaQueueSummary();
+  catalogueRows=JSON.parse(catalogueJSON);catalogueItem=catalogueRows.find(a=>a.file===filename);
+  if(newMode){$('status').textContent='New article published. Reload this page to edit it as an existing article.';setTimeout(()=>location.replace('editor.html?file='+encodeURIComponent(filename)),1200);}
+  $('status').textContent='Article and both catalogues published. GitHub Pages may take a few minutes to update.';
+  $('token').value='';
+ }catch(err){$('status').textContent=err.message+' If the article was already published, retry publishing to complete catalogue synchronization. Your edits remain in this editor.'}
+ finally{button.disabled=false}
+};
+
+// Phase 2 editorial enhancements. Keep selection when toolbar buttons take focus.
+const enhancedCommands={alignLeft:'justifyLeft',alignCenter:'justifyCenter',alignRight:'justifyRight',alignJustify:'justifyFull',undoEdit:'undo',redoEdit:'redo'};
+Object.entries(enhancedCommands).forEach(([id,cmd])=>$(id).addEventListener('click',()=>{restoreSelection();document.execCommand(cmd,false,null)}));
+function selectedTableCell(){const s=window.getSelection();const n=s&&s.anchorNode;const el=n?.nodeType===1?n:n?.parentElement;return el?.closest?.('td,th')||null}
+function tableAtCursor(){const cell=selectedTableCell();return cell&&content.contains(cell)?cell:null}
+$('insertTable').onclick=()=>{
+ const rawRows=prompt('Number of rows (1–20):','3');if(rawRows===null)return;
+ const rawCols=prompt('Number of columns (1–10):','3');if(rawCols===null)return;
+ const rows=Number(rawRows),cols=Number(rawCols);
+ if(!Number.isInteger(rows)||!Number.isInteger(cols)||rows<1||rows>20||cols<1||cols>10){alert('Choose 1–20 rows and 1–10 columns.');return}
+ restoreSelection();const t=document.createElement('table');t.setAttribute('border','1');t.style.cssText='border-collapse:collapse;width:100%;margin:1em 0';
+ for(let r=0;r<rows;r++){const tr=t.insertRow();for(let c=0;c<cols;c++){const cell=document.createElement(r===0?'th':'td');cell.style.cssText='border:1px solid #8fa99b;padding:8px 10px;vertical-align:top';cell.append(document.createElement('br'));tr.append(cell)}}
+ const selection=window.getSelection();if(!selection.rangeCount)return;
+ const range=selection.getRangeAt(0);range.deleteContents();range.insertNode(t);const p=document.createElement('p');p.append(document.createElement('br'));t.after(p);
+ const first=t.querySelector('th,td');const r=document.createRange();r.selectNodeContents(first);r.collapse(true);selection.removeAllRanges();selection.addRange(r);savedRange=r.cloneRange();content.focus();
+};
+$('tableRowAdd').onclick=()=>{const cell=tableAtCursor();if(!cell)return alert('Click inside a table cell first.');const tr=cell.parentElement,clone=tr.cloneNode(true);clone.querySelectorAll('th,td').forEach(c=>{if(c.tagName==='TH'){const td=document.createElement('td');td.innerHTML='<br>';td.style.cssText=c.style.cssText;c.replaceWith(td)}else c.innerHTML='<br>'});tr.after(clone)};
+$('tableRowDelete').onclick=()=>{const cell=tableAtCursor();if(!cell)return alert('Click inside a table cell first.');const tr=cell.parentElement,t=tr.closest('table');if(t.rows.length<=1)return alert('Keep at least one row.');tr.remove()};
+$('tableColAdd').onclick=()=>{const cell=tableAtCursor();if(!cell)return alert('Click inside a table cell first.');const i=cell.cellIndex;const t=cell.closest('table');[...t.rows].forEach(tr=>{const src=tr.cells[Math.min(i,tr.cells.length-1)];if(!src)return;const n=src.cloneNode(false);n.append(document.createElement('br'));src.after(n)})};
+$('tableColDelete').onclick=()=>{const cell=tableAtCursor();if(!cell)return alert('Click inside a table cell first.');const i=cell.cellIndex,t=cell.closest('table');if([...t.rows].some(tr=>tr.cells.length<=1))return alert('Keep at least one column.');[...t.rows].forEach(tr=>tr.cells[i]?.remove())};
+function wrapContainer(img){return img.closest('figure')||cropFrame(img)||img}
+$('photoWrap').onchange=e=>{if(!selectedPhoto)return;const el=wrapContainer(selectedPhoto);el.classList.remove('tuvyan-wrap-left','tuvyan-wrap-right');el.style.float='';el.style.clear='';if(e.target.value!=='none'){el.classList.add('tuvyan-wrap-'+e.target.value);el.style.float=e.target.value;el.style.clear=e.target.value;el.style.width=el.style.width||'40%';el.style.maxWidth='48%';el.style.margin=e.target.value==='left'?'0.35em 1.2em 0.7em 0':'0.35em 0 0.7em 1.2em'}else{el.style.margin='0 auto';el.style.maxWidth='100%'} };
+content.addEventListener('click',e=>{const img=e.target.closest('img');if(img&&content.contains(img)){$('photoWrap').value=wrapContainer(img).classList.contains('tuvyan-wrap-left')?'left':wrapContainer(img).classList.contains('tuvyan-wrap-right')?'right':'none'}});
+
+</script></body></html>

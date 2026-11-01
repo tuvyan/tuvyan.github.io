@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-31-aida-two-articles",
-  "method": "Existing title-similarity suggestions retained; new Aida Amoga connections are thematic suggestions based on catalogue titles, not verified editorial or historical relationships.",
+  "version": "2026-11-01-editorial-suggestions",
+  "method": "Existing editorial selections preserved in original order. New links are suggested by title, descriptions, tags and topic overlap, not by reading full article text; review before publishing. No historical relationships asserted.",
   "links": {
     "the-handsomest-drowned-man-in-the-world-and-myth-making.html": [
       "the-handsomest-drowned-man-in-the-world-and-myth-making-2.html"
@@ -9,7 +9,8 @@
       "the-handsomest-drowned-man-in-the-world-and-myth-making.html"
     ],
     "music-archive/anatalia-magkachi-saboy-biography.html": [
-      "the-banaos-by-am-saboy-and-au-saboy.html"
+      "the-banaos-by-am-saboy-and-au-saboy.html",
+      "cordillera-indigenous-music-2-by-am-saboy.html"
     ],
     "augustus-ulat-saboy-papers-cb-villanueva.html": [
       "aus.html",
@@ -66,7 +67,8 @@
       "nan-layad-nen-likhatan-love-song-of-the-igorots.html"
     ],
     "nan-layad-nen-likhatan-love-song-of-the-igorots.html": [
-      "layad-nen-likhatan-cordilleras-most-popular-song.html"
+      "layad-nen-likhatan-cordilleras-most-popular-song.html",
+      "baguio-reads-carlos-p-romulo-that-thing-about-igorots.html"
     ],
     "notable-quotes-from-kingdom-of-heaven.html": [
       "notable-quotes-from-v-is-for-vendettta.html",
@@ -118,10 +120,13 @@
       "notable-quotes-from-kingdom-of-heaven.html"
     ],
     "the-pagta-kalingas-no-1-contribution-to-our-national-cultural-treasure.html": [
-      "pinikpikan-and-dinuguan-christian-fundamentalism-and-philippine-culture.html"
+      "pinikpikan-and-dinuguan-christian-fundamentalism-and-philippine-culture.html",
+      "aida-amoga-manjajawak.html",
+      "are-kalingas-and-tingguians-ethnically-one.html"
     ],
     "pinikpikan-and-dinuguan-christian-fundamentalism-and-philippine-culture.html": [
-      "the-pagta-kalingas-no-1-contribution-to-our-national-cultural-treasure.html"
+      "the-pagta-kalingas-no-1-contribution-to-our-national-cultural-treasure.html",
+      "burning-cultural-artifacts-a-biblical-mandate.html"
     ],
     "poetry.html": [
       "cnf.html",
@@ -147,7 +152,8 @@
     ],
     "venture-to-harmony-the-sumadel-butbut-bodong.html": [
       "sumadel-butbut-conflict-letter-to-ireneo-uyam.html",
-      "sumadel-butbut-conflict-aus.html"
+      "sumadel-butbut-conflict-aus.html",
+      "banao-bodong-tribal-association.html"
     ],
     "sumadel-butbut-conflict-letter-to-ireneo-uyam.html": [
       "venture-to-harmony-the-sumadel-butbut-bodong.html",
@@ -177,12 +183,119 @@
       "aida-amoga-manjajawak.html"
     ],
     "the-living-anitos-refashioning-tradition-performing-ethnicity.html": [
-      "aida-amoga-manjajawak.html"
+      "aida-amoga-manjajawak.html",
+      "voicing-ethnicity.html",
+      "a-days-journey-with-a-manjajawak.html"
     ],
     "a-days-journey-with-a-manjajawak.html": [
       "aida-amoga-manjajawak.html",
       "matatagun-anitu-living-anito.html",
       "monroe-taclawan-vanaw-chanter.html"
+    ],
+    "are-kalingas-and-tingguians-ethnically-one.html": [
+      "aida-amoga-manjajawak.html",
+      "the-pagta-kalingas-no-1-contribution-to-our-national-cultural-treasure.html"
+    ],
+    "baguio-reads-carlos-p-romulo-that-thing-about-igorots.html": [
+      "nan-layad-nen-likhatan-love-song-of-the-igorots.html"
+    ],
+    "balbalasang-its-you-aus.html": [
+      "history-of-balbalasang.html",
+      "the-wild-man-of-balbalasang.html"
+    ],
+    "banao-bodong-tribal-association.html": [
+      "the-bodong-has-no-ideology.html",
+      "venture-to-harmony-the-sumadel-butbut-bodong.html"
+    ],
+    "burning-cultural-artifacts-a-biblical-mandate.html": [
+      "deconverting-from-sectarianism-a-culture-of-hate.html"
+    ],
+    "churya-and-kidla-a-glimpse-of-bontoc-worldview.html": [
+      "rainmaking-in-bontoc.html"
+    ],
+    "cordillera-indigenous-music-2-by-am-saboy.html": [
+      "music-archive/anatalia-magkachi-saboy-biography.html"
+    ],
+    "deconverting-from-sectarianism-the-one-and-only-true-church.html": [
+      "deconverting-from-sectarianism-a-culture-of-hate.html",
+      "deconverting-from-sectarianism-being-liberal-or-conservative.html",
+      "deconverting-from-sectarianism-breaking-free-from-an-ideological-bubble.html"
+    ],
+    "deconverting-from-sectarianism-a-culture-of-hate.html": [
+      "deconverting-from-sectarianism-being-liberal-or-conservative.html",
+      "deconverting-from-sectarianism-breaking-free-from-an-ideological-bubble.html",
+      "deconverting-from-sectarianism-the-one-and-only-true-church.html"
+    ],
+    "deconverting-from-sectarianism-being-liberal-or-conservative.html": [
+      "deconverting-from-sectarianism-a-culture-of-hate.html",
+      "deconverting-from-sectarianism-breaking-free-from-an-ideological-bubble.html",
+      "deconverting-from-sectarianism-the-one-and-only-true-church.html"
+    ],
+    "deconverting-from-sectarianism-breaking-free-from-an-ideological-bubble.html": [
+      "deconverting-from-sectarianism-a-culture-of-hate.html",
+      "deconverting-from-sectarianism-being-liberal-or-conservative.html",
+      "deconverting-from-sectarianism-the-one-and-only-true-church.html"
+    ],
+    "devangelized-the-pastor-is-always-right.html": [
+      "devangelized-childhood-indoctrination-in-a-fundamentalist-church-2.html"
+    ],
+    "devangelized-childhood-indoctrination-in-a-fundamentalist-church.html": [
+      "devangelized-childhood-indoctrination-in-a-fundamentalist-church-2.html"
+    ],
+    "devangelized-childhood-indoctrination-in-a-fundamentalist-church-2.html": [
+      "devangelized-childhood-indoctrination-in-a-fundamentalist-church.html"
+    ],
+    "history-of-balbalasang.html": [
+      "balbalasang-its-you-aus.html",
+      "the-wild-man-of-balbalasang.html"
+    ],
+    "kanu-and-noka-in-kalinga-oral-tradition.html": [
+      "aida-amoga-manjajawak.html",
+      "the-ullalim-festival-of-kalinga.html"
+    ],
+    "pioneering-a-life-for-the-stouthearted-and-the-adventurous.html": [
+      "augustus-ulat-saboy-papers-cb-villanueva.html",
+      "aus.html",
+      "gus-response-to-eulogies.html"
+    ],
+    "rainmaking-in-bontoc.html": [
+      "churya-and-kidla-a-glimpse-of-bontoc-worldview.html"
+    ],
+    "romy-tangbawan-scribe-of-the-tribe.html": [
+      "aida-amoga-manjajawak.html",
+      "vanaw.html",
+      "voicing-ethnicity.html"
+    ],
+    "the-bodong-has-no-ideology.html": [
+      "banao-bodong-tribal-association.html",
+      "venture-to-harmony-the-sumadel-butbut-bodong.html"
+    ],
+    "the-ullalim-festival-of-kalinga.html": [
+      "ullalim-sogsogna.html",
+      "aida-amoga-manjajawak.html",
+      "kanu-and-noka-in-kalinga-oral-tradition.html"
+    ],
+    "the-wild-man-of-balbalasang.html": [
+      "balbalasang-its-you-aus.html",
+      "history-of-balbalasang.html"
+    ],
+    "ullalim-sogsogna.html": [
+      "the-ullalim-festival-of-kalinga.html"
+    ],
+    "youngblood-paniyaw.html": [
+      "a-days-journey-with-a-manjajawak.html",
+      "aida-amoga-manjajawak.html",
+      "the-living-anitos-refashioning-tradition-performing-ethnicity.html"
+    ],
+    "vanaw.html": [
+      "aida-amoga-manjajawak.html",
+      "romy-tangbawan-scribe-of-the-tribe.html",
+      "voicing-ethnicity.html"
+    ],
+    "voicing-ethnicity.html": [
+      "aida-amoga-manjajawak.html",
+      "the-living-anitos-refashioning-tradition-performing-ethnicity.html",
+      "a-days-journey-with-a-manjajawak.html"
     ]
   }
 }

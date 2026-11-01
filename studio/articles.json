@@ -975,5 +975,16 @@
       "blog"
     ],
     "original_publication_date": "2025-08-10"
+  },
+  {
+    "file": "nostalgia-in-eric-gamalindas-my-sad-republic.html",
+    "title": "New article",
+    "category": "blog",
+    "categories": [
+      "blog",
+      "papers"
+    ],
+    "description": "An exercise in literary criticism using Eric Gamalinda's award-winning fiction, My Sad Republic.",
+    "original_publication_date": "2009-08-21"
   }
 ]

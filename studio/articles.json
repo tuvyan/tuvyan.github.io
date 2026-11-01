@@ -38,7 +38,10 @@
     "title": "\"My Heavenly Home\": An Ex-Preachers Reflection",
     "category": "blog",
     "review_status": "suggested",
-    "tags": []
+    "tags": [],
+    "categories": [
+      "blog"
+    ]
   },
   {
     "file": "the-handsomest-drowned-man-in-the-world-and-myth-making.html",

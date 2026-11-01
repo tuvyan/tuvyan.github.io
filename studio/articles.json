@@ -916,7 +916,10 @@
     "title": "Using Culture for Begging is Paniyaw",
     "category": "heritage",
     "review_status": "suggested",
-    "tags": []
+    "tags": [],
+    "categories": [
+      "heritage"
+    ]
   },
   {
     "file": "more-documents-about-the-vanaw.html",

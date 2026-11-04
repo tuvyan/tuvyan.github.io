@@ -409,7 +409,7 @@ window.addEventListener('pagehide',()=>{clearTimeout(draftTimer);saveLocalDraft(
 (function(){
  const search=document.getElementById('existingSearch'),select=document.getElementById('existingSelect'),open=document.getElementById('openExisting'),status=document.getElementById('existingPickerStatus');
  let entries=[];
- function validFile(f){return typeof f==='string' && /^(?:[a-z0-9][a-z0-9._-]*\\/)*[a-z0-9][a-z0-9._-]*\\.html$/i.test(f)&&!f.includes('..')}
+ function validFile(f){return typeof f==='string' && /^(?:[a-z0-9][a-z0-9._-]*\/)*[a-z0-9][a-z0-9._-]*\.html$/i.test(f)&&!f.includes('..')}
  function render(){const q=search.value.trim().toLocaleLowerCase();const matches=entries.filter(a=>!q||a.title.toLocaleLowerCase().includes(q)||a.file.toLocaleLowerCase().includes(q));select.replaceChildren();const blank=document.createElement('option');blank.value='';blank.textContent=matches.length?'Choose an article ('+matches.length+' matching)…':'No matching articles';select.append(blank);for(const a of matches.slice(0,300)){const option=document.createElement('option');option.value=a.file;option.textContent=a.title+' — '+a.file;select.append(option)}open.disabled=true;status.textContent=matches.length>300?'Showing first 300 matches; refine your search.':matches.length+' article(s) found.'}
  search.addEventListener('input',render);select.addEventListener('change',()=>{open.disabled=!select.value});
  open.addEventListener('click',()=>{const file=select.value;if(!validFile(file))return;if(!confirm('Open '+file+'? Download or save any unsaved draft in this editor first.'))return;location.href='editor.html?file='+encodeURIComponent(file)});
